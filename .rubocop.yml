@@ -1,5 +1,16 @@
-Metrics/LineLength:
-  Enabled: false
-
-Style/Documentation:
+Rails:
+  Enabled: true
+AllCops:
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - !ruby/regexp /old_and_unused\.rb$/
+    - 'bin/**'
+    - 'Rakefile'
+    - 'spec/spec_helper.rb'
+Documentation:
   Enabled: false

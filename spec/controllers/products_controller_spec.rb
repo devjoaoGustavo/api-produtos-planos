@@ -2,6 +2,15 @@ require 'rails_helper'
 
 describe ProductsController do
   describe 'POST create' do
+    it 'creates a product with params' do
+      product_params = { name: 'Name',
+                         description: 'Description',
+                         image: 'Image' }
+
+      post :create, product: product_params, format: :json
+      expect(response).to have_http_status(:created)
+    end
+
     context 'with empty params' do
       it 'not creates a product' do
         product_params = { name: '',
@@ -11,15 +20,6 @@ describe ProductsController do
         post :create, product: product_params, format: :json
         expect(response).to_not have_http_status(:created)
       end
-    end
-
-    it 'creates a product with params' do
-      product_params = { name: 'Name',
-                         description: 'Description',
-                         image: 'Image' }
-
-      post :create, product: product_params, format: :json
-      expect(response).to have_http_status(:created)
     end
   end
 

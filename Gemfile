@@ -17,6 +17,7 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'pry-rails'
+  gem 'rubocop', require: false
 end
 
 group :development do
