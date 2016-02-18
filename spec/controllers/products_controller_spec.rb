@@ -41,4 +41,16 @@ describe ProductsController do
       expect(JSON.parse(response.body)).not_to have_content products[3].name
     end
   end
+
+  describe 'POST update' do
+    it 'edit a product' do
+      product = create(:product)
+
+      product_params = { name: 'Nome editado',
+                         description: 'Descrição editada'}
+
+      put :update, id: product.id, product: product_params, format: :json
+      expect(response).to have_http_status(:success)
+    end
+  end
 end

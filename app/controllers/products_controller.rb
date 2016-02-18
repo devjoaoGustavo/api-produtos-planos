@@ -14,6 +14,12 @@ class ProductsController < ApplicationController
     respond_with @product
   end
 
+  def update
+    @product = Product.find(params[:id])
+    @product.update(product_params)
+    respond_with @product
+  end
+
   private
 
   def product_params
