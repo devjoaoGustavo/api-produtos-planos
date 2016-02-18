@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Plan.create(name: 'Hospedagem',
+            description: 'Hospedagem de domínios na Locaweb.',
+            details: 'Detalhes do Plano')

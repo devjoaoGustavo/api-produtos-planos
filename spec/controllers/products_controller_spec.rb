@@ -41,5 +41,4 @@ describe ProductsController do
       expect(JSON.parse(response.body)).not_to have_content products[3].name
     end
   end
-
 end
