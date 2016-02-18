@@ -11,20 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_160_217_175_117) do
-  create_table 'plans', force: :cascade do |t|
-    t.string   'name'
-    t.text     'description'
-    t.string   'details'
-    t.datetime 'created_at',  null: false
-    t.datetime 'updated_at',  null: false
+ActiveRecord::Schema.define(version: 20160218161608) do
+
+  create_table "plans", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "details"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "product_id"
   end
 
-  create_table 'products', force: :cascade do |t|
-    t.string   'name'
-    t.text     'description'
-    t.string   'image'
-    t.datetime 'created_at',  null: false
-    t.datetime 'updated_at',  null: false
+  add_index "plans", ["product_id"], name: "index_plans_on_product_id"
+
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "image"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
+
 end

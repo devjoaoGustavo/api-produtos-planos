@@ -6,11 +6,11 @@ RSpec.describe 'Plans API', type: :request do
     get "/plans/#{plan.id}.json"
 
     json = JSON.parse(response.body)
-
     expect(response).to be_success
     expect(json['name']).to eq(plan.name)
     expect(json['details']).to eq(plan.details)
     expect(json['description']).to eq(plan.description)
+    expect(json['product_id']).to eq(plan.product.id)
   end
 
   it 'shows all plans' do
@@ -27,7 +27,8 @@ RSpec.describe 'Plans API', type: :request do
 
   it 'shows two different plans with proper attributes' do
     plan1 = create(:plan)
-    plan2 = create(:plan, name: 'Email')
+    product = create(:product, name: 'Produto')
+    plan2 = create(:plan, name: 'Email', product: product)
 
     get '/plans.json'
 
@@ -36,6 +37,8 @@ RSpec.describe 'Plans API', type: :request do
     expect(response).to be_success
 
     expect(json[0]['name']).to eq plan1.name
+    expect(json[0]['product_id']).to eq plan1.product.id
     expect(json[1]['name']).to eq plan2.name
+    expect(json[1]['product_id']).to eq plan2.product.id
   end
 end

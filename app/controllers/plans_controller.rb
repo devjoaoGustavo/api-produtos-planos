@@ -17,6 +17,6 @@ class PlansController < ApplicationController
   private
 
   def plan_params
-    params.require(:plan).permit(:name, :description, :details)
+    params.require(:plan).permit(:name, :description, :details, :product_id)
   end
 end
