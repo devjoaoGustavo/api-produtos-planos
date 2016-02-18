@@ -47,7 +47,7 @@ describe ProductsController do
       product = create(:product)
 
       product_params = { name: 'Nome editado',
-                         description: 'Descrição editada'}
+                         description: 'Descrição editada' }
 
       put :update, id: product.id, product: product_params, format: :json
       expect(response).to have_http_status(:success)

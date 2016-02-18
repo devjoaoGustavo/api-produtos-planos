@@ -1,3 +1,5 @@
 class Plan < ActiveRecord::Base
-  validates :name, :details, :description, presence: true
+  belongs_to :product
+
+  validates :name, :details, :description, :product, presence: true
 end

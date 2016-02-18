@@ -6,6 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Plan.create(name: 'Hospedagem',
+product = Product.create(name: 'Hospedagem',
+                         description: 'Hospedagem de domínios na Locaweb.',
+                         image: 'Imagem do produto')
+
+Plan.create(name: 'Profissional',
             description: 'Hospedagem de domínios na Locaweb.',
-            details: 'Detalhes do Plano')
+            details: 'Detalhes do Plano',
+            product: product)
