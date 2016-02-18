@@ -5,7 +5,7 @@ RSpec.describe PlansController do
     context 'successfully' do
       it 'a new plan' do
         plan_attr = attributes_for(:plan)
-        expect { post :create, plan: plan_attr, format: :json }.to change{ Plan.count }.from(0).to(1)
+        expect { post :create, plan: plan_attr, format: :json }.to change { Plan.count }.from(0).to(1)
       end
 
       it 'has proper attributes' do
