@@ -40,4 +40,33 @@ describe PeriodicitiesController do
         .not_to have_content periodicities[3].name
     end
   end
+
+  describe 'PUT update' do
+    context 'Successfully' do
+      it 'update periodicity' do
+        periodicity = create(:periodicity)
+
+        periodicity_params = { name: 'Nome alterado',
+                               deadline: 24 }
+        put :update,
+            id: periodicity.id,
+            periodicity: periodicity_params,
+            format: :json
+        expect(response).to have_http_status :success
+      end
+    end
+    context 'Unsuccessfully' do
+      it 'with empty params' do
+        periodicity = create(:periodicity)
+
+        periodicity_params = { name: '',
+                               deadline: nil }
+        put :update,
+            id: periodicity.id,
+            periodicity: periodicity_params,
+            format: :json
+        expect(response).not_to have_http_status :success
+      end
+    end
+  end
 end

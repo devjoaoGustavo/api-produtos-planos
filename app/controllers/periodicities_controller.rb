@@ -14,6 +14,12 @@ class PeriodicitiesController < ApplicationController
     respond_with @periodicities
   end
 
+  def update
+    @periodicity = Periodicity.find(params[:id])
+    @periodicity.update(periodicity_params)
+    respond_with @periodicity
+  end
+
   private
 
   def periodicity_params
