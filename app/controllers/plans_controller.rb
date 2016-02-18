@@ -1,12 +1,18 @@
 class PlansController < ApplicationController
   def index
     @plans = Plan.all
-    respond_with @plans
+    plans_decorated = []
+    @plans.each do |plan|
+      # binding.pry
+      plans_decorated << PlanDecorator.new(plan)
+    end
+
+    respond_with plans_decorated.map(&:to_json)
   end
 
   def show
     @plan = Plan.find(params[:id])
-    respond_with @plan
+    respond_with PlanDecorator.new(@plan)
   end
 
   def create
