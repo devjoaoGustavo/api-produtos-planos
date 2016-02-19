@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :periodicities, only: [:create, :index, :update]
+  resources :periodicities, only: [:create, :index, :update, :show]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

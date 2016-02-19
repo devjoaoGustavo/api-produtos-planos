@@ -9,7 +9,7 @@ describe PricesController do
 
         post :create, plan_id: plan.id,
                       periodicity_id: periodicity.id,
-                      value: 1.99 ,
+                      value: 1.99,
                       format: :json
 
         expect(response).to have_http_status(:created)
@@ -21,11 +21,14 @@ describe PricesController do
     it 'shows a price for a plan in a periodicity' do
       plan = create(:plan)
       periodicity = create(:periodicity)
-      price = create(:price)
+      price = create(:price, plan: plan, periodicity: periodicity)
 
-      get :show, price: price.attributes, format: :json
+      get :show, id: price.id,
+                 plan_id: plan.id,
+                 periodicity_id: periodicity.id,
+                 format: :json
 
-      expect(page).to have_http_status(:success)
+      expect(response).to have_http_status(:success)
     end
   end
 end
