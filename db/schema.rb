@@ -37,6 +37,9 @@ ActiveRecord::Schema.define(version: 20160219170458) do
     t.decimal "value"
   end
 
+  add_index "prices", ["periodicity_id"], name: "index_prices_on_periodicity_id"
+  add_index "prices", ["plan_id"], name: "index_prices_on_plan_id"
+
   create_table "products", force: :cascade do |t|
     t.string   "name"
     t.text     "description"

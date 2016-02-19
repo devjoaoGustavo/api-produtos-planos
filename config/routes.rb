@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
   resources :products, only: [:create, :show, :index, :update]
   resources :plans, only: [:create, :show, :index] do
-    member do
-      get 'prices' => 'plans#show_price'
-      post 'prices' => 'plans#create_price'
+    resources :periodicities, only: :show do
+      resources :prices, only: [:show, :create]
     end
-  end  
+  end
 
-  resources :periodicities, only: [:create, :show, :index, :update]
+  resources :periodicities, only: [:create, :index, :update]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

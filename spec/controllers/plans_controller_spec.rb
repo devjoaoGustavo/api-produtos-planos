@@ -15,25 +15,4 @@ RSpec.describe PlansController do
       expect(response).not_to have_http_status(:created)
     end
   end
-  describe 'POST create_price' do
-    context 'successfully' do
-      it 'adds a new price for a plan' do
-        plan = create(:plan)
-        periodicity = create(:periodicity)
-        price_params = { value: 1.99, periodicity: periodicity.attributes }
-
-        post :create_price, id: plan.id, price: price_params , format: :json
-        expect(response).to have_http_status(:created)
-      end
-    end
-    context 'unsuccessfully' do
-      it 'adds a new price without a periodicity' do
-        plan = create(:plan)
-        price_params = { value: 5.00, periodicity: nil }
-
-        post :create_price, id: plan.id, price: price_params , format: :json
-        expect(response).not_to have_http_status(:created)
-      end
-    end
-  end
 end
