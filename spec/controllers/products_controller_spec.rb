@@ -32,7 +32,7 @@ describe ProductsController do
       create_list(:product, 20)
 
       get :index, format: :json
-      expect(JSON.parse(response.body)).to have_content '14 MyString'
+      expect(JSON.parse(response.body)).to have_content '14 Hospedagem'
     end
   end
 

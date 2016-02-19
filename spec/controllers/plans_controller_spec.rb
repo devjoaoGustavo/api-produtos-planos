@@ -20,7 +20,7 @@ RSpec.describe PlansController do
         create_list(:plan, 20)
 
         get :index, format: :json
-        expect(JSON.parse(response.body)).to have_content '14 Hospedagem'
+        expect(JSON.parse(response.body)).to have_content '14 Profissional'
       end
     end
 

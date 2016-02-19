@@ -1,9 +1,9 @@
 FactoryGirl.define do
   factory :product do
     sequence :name do |n|
-      "#{n} MyString"
+      "#{n} Hospedagem"
     end
-    description 'MyText'
-    image 'MyString'
+    description 'Hospedagem de domínios na Locaweb.'
+    image 'Imagem do produto'
   end
 end

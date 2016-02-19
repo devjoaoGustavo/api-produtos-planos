@@ -1,10 +1,10 @@
 FactoryGirl.define do
   factory :plan do
     sequence :name do |n|
-      "#{n} Hospedagem"
+      "#{n} Profissional"
     end
-    description 'Hospedagem de domínios na Locaweb.'
-    details 'Detalhes do Plano'
+    description 'Plano profissional com todos os opcionais.'
+    details 'Detalhes do plano.'
     product
   end
 end

@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :periodicity do
     sequence :name do |n|
-      "Semestral#{n}"
+      "#{n} Semestral"
     end
     deadline 6
   end

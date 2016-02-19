@@ -10,7 +10,14 @@ product = Product.create(name: 'Hospedagem',
                          description: 'Hospedagem de domínios na Locaweb.',
                          image: 'Imagem do produto')
 
-Plan.create(name: 'Profissional',
-            description: 'Hospedagem de domínios na Locaweb.',
-            details: 'Detalhes do Plano',
-            product: product)
+plan = Plan.create(name: 'Profissional',
+                   description: 'Plano profissional com todos os opcionais.',
+                   details: 'Detalhes do plano.',
+                   product: product)
+
+periodicity = Periodicity.create(name: 'Semestral',
+                                 deadline: 6)
+
+Price.create(plan: plan,
+             periodicity: periodicity,
+             value: 1.99)
