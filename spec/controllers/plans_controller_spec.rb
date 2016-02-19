@@ -20,7 +20,7 @@ RSpec.describe PlansController do
       it 'adds a new price for a plan' do
         plan = create(:plan)
         periodicity = create(:periodicity)
-        price_params = { value: 1.99, periodicity: periodicity }
+        price_params = { value: 1.99, periodicity: periodicity.attributes }
 
         post :create_price, id: plan.id, price: price_params , format: :json
         expect(response).to have_http_status(:created)

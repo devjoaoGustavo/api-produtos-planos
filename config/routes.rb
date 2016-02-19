@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   resources :products, only: [:create, :show, :index, :update]
-  resources :plans, only: [:create, :show, :index]
+  resources :plans, only: [:create, :show, :index] do
+    member do
+      get 'prices' => 'plans#show_price'
+      post 'prices' => 'plans#create_price'
+    end
+  end  
 
   resources :periodicities, only: [:create, :show, :index, :update]
 
