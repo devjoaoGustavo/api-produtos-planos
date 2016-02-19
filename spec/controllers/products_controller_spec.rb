@@ -2,7 +2,6 @@ require 'rails_helper'
 
 describe ProductsController do
   describe 'POST create' do
-
     before do
       FactoryGirl.reload
     end

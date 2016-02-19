@@ -3,7 +3,6 @@ class PlansController < ApplicationController
     @plans = Plan.all
     plans_decorated = []
     @plans.each do |plan|
-      # binding.pry
       plans_decorated << PlanDecorator.new(plan)
     end
 
