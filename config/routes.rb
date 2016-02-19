@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :products, only: [:create, :show, :index, :update]
-  resources :plans, only: [:create, :show, :index]
+  resources :plans, only: [:create, :show, :index, :update]
 
   resources :periodicities, only: [:create, :show, :index, :update]
 

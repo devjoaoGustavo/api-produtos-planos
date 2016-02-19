@@ -20,6 +20,12 @@ class PlansController < ApplicationController
     respond_with @plan
   end
 
+  def update
+    @plan = Plan.find(params[:id])
+    @plan.update(plan_params)
+    respond_with @plan
+  end
+
   private
 
   def plan_params

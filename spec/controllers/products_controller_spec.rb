@@ -2,6 +2,11 @@ require 'rails_helper'
 
 describe ProductsController do
   describe 'POST create' do
+
+    before do
+      FactoryGirl.reload
+    end
+
     it 'creates a product with params' do
       product_params = { name: 'Name',
                          description: 'Description',
