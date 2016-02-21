@@ -13,4 +13,10 @@ class PricesController < ApplicationController
     @price = Price.find(params[:id])
     respond_with @price
   end
+
+  def index
+    @prices = Price.where(plan_id: params[:plan_id],
+                          periodicity_id: params[:periodicity_id])
+    respond_with @prices
+  end
 end

@@ -1,6 +1,8 @@
 FactoryGirl.define do
   factory :price do
-    value 1.99
+    sequence :value do |n|
+      1.99 + n
+    end
     plan
     periodicity
   end
