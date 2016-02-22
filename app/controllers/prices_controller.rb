@@ -10,7 +10,7 @@ class PricesController < ApplicationController
   end
 
   def show
-    @price = Price.find(params[:id])
-    respond_with @price
+    @price_decorated = PriceDecorator.new(Price.find(params[:id]))
+    respond_with @price_decorated
   end
 end

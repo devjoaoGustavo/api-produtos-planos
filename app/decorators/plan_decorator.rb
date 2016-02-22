@@ -1,12 +1,10 @@
-class PlanDecorator < SimpleDelegator
-  include Rails.application.routes.url_helpers
-
+class PlanDecorator < ApplicationDecorator
   def to_json(_options = {})
-    JSON.parse(__getobj__.to_json).merge(links).to_json
+    super(links)
   end
 
   private
-
+  
   def links
     { 'product_path' => product_path(__getobj__.product) }
   end
