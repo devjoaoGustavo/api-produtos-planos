@@ -1,5 +1,5 @@
 class PriceDecorator < ApplicationDecorator
-  def to_json(_options={})
+  def to_json(_options = {})
     super(links)
   end
 

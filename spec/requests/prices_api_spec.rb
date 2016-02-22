@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe 'Prices API', type: :request do
   it 'shows one price with proper paths' do
     price = create(:price)
-    get "/plans/#{price.plan_id}/periodicities/#{price.periodicity_id}/prices/#{price.id}.json"
+    get "/plans/#{price.plan_id}/periodicities/#{price
+      .periodicity_id}/prices/#{price.id}.json"
 
     json = JSON.parse(response.body)
 

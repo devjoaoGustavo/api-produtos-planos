@@ -4,7 +4,7 @@ class PlanDecorator < ApplicationDecorator
   end
 
   private
-  
+
   def links
     { 'product_path' => product_path(__getobj__.product) }
   end
