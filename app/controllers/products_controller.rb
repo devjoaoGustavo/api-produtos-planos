@@ -10,8 +10,8 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
-    respond_with @product
+    @product_decorated = ProductDecorator.new(Product.find(params[:id]))
+    respond_with @product_decorated
   end
 
   def update
