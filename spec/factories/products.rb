@@ -4,6 +4,10 @@ FactoryGirl.define do
       "#{n} Hospedagem"
     end
     description 'Hospedagem de domínios na Locaweb.'
-    image 'Imagem do produto'
+    image do
+      Rack::Test::UploadedFile.new(
+        File.join(
+          Rails.root, 'spec/support/images/image.jpg'))
+    end
   end
 end

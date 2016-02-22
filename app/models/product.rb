@@ -1,5 +1,7 @@
 class Product < ActiveRecord::Base
   has_many :plans
 
-  validates :name, :description, presence: true
+  mount_uploader :image, ImageUploader
+
+  validates :name, :description, :image, presence: true
 end

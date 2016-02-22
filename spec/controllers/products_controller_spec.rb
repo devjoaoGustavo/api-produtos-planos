@@ -9,7 +9,9 @@ describe ProductsController do
     it 'creates a product with params' do
       product_params = { name: 'Name',
                          description: 'Description',
-                         image: 'Image' }
+                         image: Rack::Test::UploadedFile.new(
+                           File.join(
+                             Rails.root, 'spec/support/images/image.jpg')) }
 
       post :create, product: product_params, format: :json
       expect(response).to have_http_status(:created)
@@ -42,7 +44,10 @@ describe ProductsController do
 
       get :show, id: products[2].id, format: :json
       expect(JSON.parse(response.body)).to have_content products[2].name
+      expect(JSON.parse(response.body)).to have_content products[2].image
+
       expect(JSON.parse(response.body)).not_to have_content products[3].name
+      expect(JSON.parse(response.body)).not_to have_content products[3].image
     end
   end
 
