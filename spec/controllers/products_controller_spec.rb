@@ -9,9 +9,7 @@ describe ProductsController do
     it 'creates a product with params' do
       product_params = { name: 'Name',
                          description: 'Description',
-                         image: Rack::Test::UploadedFile.new(
-                           File.join(
-                             Rails.root, 'spec/support/images/image.jpg')) }
+                         image: open('spec/support/images/image.jpg') }
 
       post :create, product: product_params, format: :json
       expect(response).to have_http_status(:created)

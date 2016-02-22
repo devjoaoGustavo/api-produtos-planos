@@ -8,7 +8,7 @@
 
 product = Product.create(name: 'Hospedagem',
                          description: 'Hospedagem de domínios na Locaweb.',
-                         image: 'Imagem do produto')
+                         image: open('spec/support/images/image.jpg'))
 
 plan = Plan.create(name: 'Profissional',
                    description: 'Plano profissional com todos os opcionais.',
