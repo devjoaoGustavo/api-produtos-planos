@@ -1,7 +1,7 @@
 class PeriodicitiesController < ApplicationController
   def create
-    # @periodicity = Periodicity.create(periodicity_params)
-    @periodicity = Periodicity.create(name: params[:name], deadline: params[:deadline])
+    @periodicity = Periodicity.create(name: params[:name],
+                                      deadline: params[:deadline])
     respond_with @periodicity
   end
 

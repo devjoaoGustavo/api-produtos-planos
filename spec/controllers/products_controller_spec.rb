@@ -7,21 +7,19 @@ describe ProductsController do
     end
 
     it 'creates a product with params' do
-      product_params = { name: 'Name',
-                         description: 'Description',
-                         image: open('spec/support/images/image.jpg') }
-
-      post :create, product: product_params, format: :json
+      post :create, name: 'Name',
+                    description: 'Description',
+                    image: open('spec/support/images/image.jpg'),
+                    format: :json
       expect(response).to have_http_status(:created)
     end
 
     context 'with empty params' do
       it 'not creates a product' do
-        product_params = { name: '',
-                           description: '',
-                           image: '' }
-
-        post :create, product: product_params, format: :json
+        post :create, name: '',
+                      description: '',
+                      image: open('spec/support/images/image.jpg'),
+                      format: :json
         expect(response).to_not have_http_status(:created)
       end
     end

@@ -1,6 +1,8 @@
 class ProductsController < ApplicationController
   def create
-    @product = Product.create(product_params)
+    @product = Product.create(name: params[:name],
+                              description: params[:description],
+                              image: File.open(params[:image]))
     respond_with @product
   end
 
