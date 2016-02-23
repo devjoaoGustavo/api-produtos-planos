@@ -1,12 +1,7 @@
 class PlansController < ApplicationController
   def index
     @plans = Plan.all
-    plans_decorated = []
-    @plans.each do |plan|
-      plans_decorated << PlanDecorator.new(plan)
-    end
-
-    respond_with plans_decorated.map(&:to_json)
+    respond_with @plans
   end
 
   def show

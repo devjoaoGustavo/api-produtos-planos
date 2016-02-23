@@ -3,10 +3,7 @@ require 'rails_helper'
 describe PeriodicitiesController do
   describe 'POST create' do
     it 'creates a periodicity with params' do
-      periodicity_param = { name: 'Name',
-                            deadline: 6 }
-
-      post :create, periodicity: periodicity_param, format: :json
+      post :create, name: 'name', deadline: 6, format: :json
       expect(response).to have_http_status(:created)
     end
 

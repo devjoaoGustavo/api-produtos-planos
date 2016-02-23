@@ -15,6 +15,11 @@ plan = Plan.create(name: 'Profissional',
                    details: 'Detalhes do plano.',
                    product: product)
 
+plan = Plan.create(name: 'Básico',
+                   description: 'Plano básico com todos os opcionais.',
+                   details: 'Detalhes do plano.',
+                   product: product)
+
 periodicity_1 = Periodicity.create(name: 'Semestral',
                                  deadline: 6)
 periodicity_2 = Periodicity.create(name: 'Mensal',

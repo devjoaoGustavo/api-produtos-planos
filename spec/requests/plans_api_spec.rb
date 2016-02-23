@@ -29,21 +29,4 @@ RSpec.describe 'Plans API', type: :request do
     expect(json.count).to eq NUMBER_OF_PLANS
   end
 
-  it 'shows two different plans with proper attributes' do
-    plan1 = create(:plan)
-    product = create(:product, name: 'Produto')
-    plan2 = create(:plan, name: 'Email', product: product)
-
-    get '/plans.json'
-
-    json = JSON.parse(response.body)
-
-    expect(response).to be_success
-    expect(json[0]).to include plan1.name
-    expect(json[0]).to include plan1.product.id.to_s
-    expect(json[0]).to include product_path(plan1.product)
-    expect(json[1]).to include plan2.name
-    expect(json[1]).to include plan2.product.id.to_s
-    expect(json[1]).to include product_path(plan2.product)
-  end
 end

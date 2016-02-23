@@ -10,8 +10,13 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @plans = Plan.where("product_id = ?", params[:id])
     @product_decorated = ProductDecorator.new(Product.find(params[:id]))
-    respond_with @product_decorated
+
+
+    @response = { product: JSON.parse(@product_decorated.to_json), plans: @plans }
+    respond_with @response
+
   end
 
   def update
