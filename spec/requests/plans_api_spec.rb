@@ -28,5 +28,4 @@ RSpec.describe 'Plans API', type: :request do
 
     expect(json.count).to eq NUMBER_OF_PLANS
   end
-
 end

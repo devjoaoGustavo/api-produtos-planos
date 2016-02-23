@@ -3,16 +3,16 @@ require 'rails_helper'
 RSpec.describe PlansController do
   describe 'POST create' do
     it 'a new plan' do
-      plan_attr = build(:plan).attributes
-
       product = create(:product)
 
-      expect { post :create,
-               name: 'Hospedagem',
-               description: 'Descrição',
-               details: 'Detalhes',
-               product_id: product.id,
-               format: :json }
+      expect do
+        post :create,
+             name: 'Hospedagem',
+             description: 'Descrição',
+             details: 'Detalhes',
+             product_id: product.id,
+             format: :json
+      end
         .to change { Plan.count }.from(0).to(1)
     end
 
