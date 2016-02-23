@@ -5,8 +5,7 @@ class PricesController < ApplicationController
     @price = Price.create(plan_id: @plan.id,
                           periodicity_id: @periodicity.id,
                           value: params[:value])
-    respond_with @price, location:
-      -> { plan_periodicity_price_path(@plan, @periodicity, @price) }
+    respond_with @price
   end
 
   def show
@@ -16,7 +15,7 @@ class PricesController < ApplicationController
 
   def index
     @prices = Price.where(plan_id: params[:plan_id],
-                          periodicity_id: params[:periodicity_id])
+                          periodicity_id: params[:periodicity_id]).order(id: :desc)
     respond_with @prices
   end
 end
