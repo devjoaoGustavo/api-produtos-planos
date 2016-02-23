@@ -173,7 +173,7 @@ GET /plans/3
 #### Response
 ```
 Status 200
-Location /plans/3
+Location: /plans/3
 
 {
   "id": 3,
