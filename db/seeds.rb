@@ -15,9 +15,30 @@ plan = Plan.create(name: 'Profissional',
                    details: 'Detalhes do plano.',
                    product: product)
 
-periodicity = Periodicity.create(name: 'Semestral',
+periodicity_1 = Periodicity.create(name: 'Semestral',
                                  deadline: 6)
+periodicity_2 = Periodicity.create(name: 'Mensal',
+                                 deadline: 1)
+periodicity_3 = Periodicity.create(name: 'Anual',
+                                 deadline: 12)
 
 Price.create(plan: plan,
-             periodicity: periodicity,
+             periodicity: periodicity_1,
              value: 1.99)
+Price.create(plan: plan,
+             periodicity: periodicity_1,
+             value: 3.99)
+
+Price.create(plan: plan,
+             periodicity: periodicity_2,
+             value: 4.99)
+Price.create(plan: plan,
+             periodicity: periodicity_2,
+             value: 5.99)
+
+Price.create(plan: plan,
+             periodicity: periodicity_3,
+             value: 6.99)
+Price.create(plan: plan,
+             periodicity: periodicity_3,
+             value: 7.99)
