@@ -10,19 +10,13 @@ class PlansController < ApplicationController
   end
 
   def create
-    @plan = Plan.create(plan_params)
+    @plan = Plan.create(name: params[:name], description: params[:description], details: params[:details], product_id: params[:product_id])
     respond_with @plan
   end
 
   def update
     @plan = Plan.find(params[:id])
-    @plan.update(plan_params)
+    @plan.update(name: params[:name], description: params[:description], details: params[:details], product_id: params[:product_id])
     respond_with @plan
-  end
-
-  private
-
-  def plan_params
-    params.require(:plan).permit(:name, :description, :details, :product_id)
   end
 end

@@ -7,11 +7,13 @@ describe ProductsController do
     end
 
     it 'creates a product with params' do
-      product_params = { name: 'Name',
-                         description: 'Description',
-                         image: open('spec/support/images/image.jpg') }
 
-      post :create, product: product_params, format: :json
+      post :create,
+           name: 'Name',
+           description: 'Description',
+           image: open('spec/support/images/image.jpg'),
+           format: :json
+
       expect(response).to have_http_status(:created)
     end
 
@@ -53,10 +55,12 @@ describe ProductsController do
     it 'edit a product' do
       product = create(:product)
 
-      product_params = { name: 'Nome editado',
-                         description: 'Descrição editada' }
-
-      put :update, id: product.id, product: product_params, format: :json
+      put :update,
+          id: product.id,
+          name: 'Nome editado',
+          description: 'Descrição editada',
+          format: :json
+          
       expect(response).to have_http_status(:success)
     end
   end

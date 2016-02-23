@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   def create
-    @product = Product.create(product_params)
+    @product = Product.create(name: params[:name], description: params[:description], image: params[:image])
     respond_with @product
   end
 
@@ -21,13 +21,8 @@ class ProductsController < ApplicationController
 
   def update
     @product = Product.find(params[:id])
-    @product.update(product_params)
+    @product.update(name: params[:name], description: params[:description], image: params[:image])
     respond_with @product
   end
 
-  private
-
-  def product_params
-    params.require(:product).permit(:name, :description, :image)
-  end
 end

@@ -4,7 +4,15 @@ RSpec.describe PlansController do
   describe 'POST create' do
     it 'a new plan' do
       plan_attr = build(:plan).attributes
-      expect { post :create, plan: plan_attr, format: :json }
+
+      product = create(:product)
+
+      expect { post :create,
+               name: 'Hospedagem',
+               description: 'Descrição',
+               details: 'Detalhes',
+               product_id: product.id,
+               format: :json }
         .to change { Plan.count }.from(0).to(1)
     end
 
@@ -36,14 +44,18 @@ RSpec.describe PlansController do
 
     describe 'POST update' do
       it 'edit a plan' do
-        plan = create(:plan)
-        product = create(:product, name: 'Produto editado')
-        plan_params = { name: 'Plano editado',
-                        description: 'Descição editada',
-                        details: 'Detalhes editado',
-                        product: product }
+        product = create(:product)
+        product_2 = create(:product, name: 'Outro produto')
+        plan = create(:plan, product: product)
 
-        put :update, id: plan.id, plan: plan_params, format: :json
+        put :update,
+            id: plan.id,
+            name: 'Hospedagem editado',
+            description: 'Descrição editada',
+            details: 'Detalhes editado',
+            product_id: product_2.id,
+            format: :json
+
         expect(response).to have_http_status(:success)
       end
     end

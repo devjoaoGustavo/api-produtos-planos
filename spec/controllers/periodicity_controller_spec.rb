@@ -43,11 +43,10 @@ describe PeriodicitiesController do
       it 'update periodicity' do
         periodicity = create(:periodicity)
 
-        periodicity_params = { name: 'Nome alterado',
-                               deadline: 24 }
         put :update,
             id: periodicity.id,
-            periodicity: periodicity_params,
+            name: 'Nome alterado',
+            deadline: 24,
             format: :json
         expect(response).to have_http_status :success
       end
