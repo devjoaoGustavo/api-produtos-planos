@@ -15,7 +15,8 @@ class PricesController < ApplicationController
 
   def index
     @prices = Price.where(plan_id: params[:plan_id],
-                          periodicity_id: params[:periodicity_id]).order(id: :desc)
+                          periodicity_id: params[:periodicity_id])
+                   .order(id: :desc)
     respond_with @prices
   end
 end
