@@ -6,16 +6,20 @@ RSpec.describe Api::PlansController do
       product = create(:product)
       plan_params = { name: 'Hospedagem',
                       description: 'Descrição',
-                      details: 'Detalhes',
+                      details: ['5 gb gratuitos',
+                                '2 contas de email',
+                                'Domínio grátis'],
                       product_id: product.id }
 
+      # binding.pry
+
       expect { post :create, plan: plan_params, format: :json }
-        .to change { Plan.count }.from(0).to(1)
+        .to change { Plan.count }.by(1)
     end
 
     it 'does not create with blank fields' do
       plan_attr = attributes_for(:plan, name: '',
-                                        details: '',
+                                        details: [],
                                         description: '',
                                         product: nil)
       post :create, plan: plan_attr, format: :json
@@ -48,7 +52,7 @@ RSpec.describe Api::PlansController do
         plan = create(:plan, product: product)
         plan_params = { name: 'Hospedagem editado',
                         description: 'Descrição editada',
-                        details: 'Detalhes editado',
+                        details: ['Detalhes editado'],
                         product_id: product_2.id }
 
         put :update, id: plan.id, plan: plan_params, format: :json

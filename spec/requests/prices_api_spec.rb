@@ -10,6 +10,7 @@ RSpec.describe 'Prices API', type: :request do
 
     expect(response).to be_success
     expect(json['plan_path']).to eq api_plan_path(price.plan)
-    expect(json['periodicity_path']).to eq api_periodicity_path(price.periodicity)
+    expect(json['periodicity_path'])
+      .to eq api_periodicity_path(price.periodicity)
   end
 end
