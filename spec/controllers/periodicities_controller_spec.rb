@@ -21,7 +21,7 @@ describe Api::PeriodicitiesController do
     end
   end
 
-  describe 'GET show' do
+  describe 'GET index' do
     it 'get a list of periodicities' do
       periodicities = create_list(:periodicity, 20)
 

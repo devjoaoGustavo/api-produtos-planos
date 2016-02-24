@@ -28,4 +28,25 @@ RSpec.describe 'Plans API', type: :request do
 
     expect(json.count).to eq NUMBER_OF_PLANS
   end
+  it 'shows all prices/periodicities for the specific plan' do
+    product = create(:product)
+    plan = create(:plan, product: product)
+    periodicity = create(:periodicity)
+    periodicity2 = create(:periodicity)
+    periodicity3 = create(:periodicity)
+    periodicity4 = create(:periodicity)
+    create(:price, plan: plan, periodicity: periodicity, value: 1.23)
+    create(:price, plan: plan, periodicity: periodicity2, value: 3.63)
+    create(:price, plan: plan, periodicity: periodicity3, value: 12.54)
+    create(:price, plan: plan, periodicity: periodicity4, value: 4.22)
+
+    get "/api/plans/#{plan.id}/prices.json"
+
+    expect(response).to be_success
+    expect(JSON.parse(response.body)).to include periodicity.name
+    expect(JSON.parse(response.body)).to include periodicity2.name
+    expect(JSON.parse(response.body)).to include periodicity3.name
+    expect(JSON.parse(response.body)).to include periodicity4.name
+    expect(JSON.parse(response.body)).to include 1.23
+  end
 end

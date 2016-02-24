@@ -1,13 +1,18 @@
 module Api
   class PlansController < ApiController
     def index
-      @plans = Plan.all
+      @plans = Plan.where(product_id: params[:product_id])
       respond_with @plans
     end
 
     def show
-      @plan = Plan.find(params[:id])
-      respond_with PlanDecorator.new(@plan)
+      @plan = PlanDecorator.new(Plan.find(params[:id]))
+
+      @periodicities = @plan.periodicities.uniq.map do |periodicity|
+        PeriodicityDecorator.new(periodicity, @plan)
+      end
+      @response = { plan: @plan, periodicities: @periodicities.map(&:to_json) }
+      respond_with @response
     end
 
     def create

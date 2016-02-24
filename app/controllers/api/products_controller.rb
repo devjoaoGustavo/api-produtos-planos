@@ -11,8 +11,8 @@ module Api
     end
 
     def show
-      @plans = Plan.where('product_id = ?', params[:id])
       @product_decorated = ProductDecorator.new(Product.find(params[:id]))
+      @plans = @product_decorated.plans
 
       @response = { product: JSON.parse(@product_decorated.to_json),
                     plans: @plans }
