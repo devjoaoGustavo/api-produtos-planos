@@ -1,0 +1,8 @@
+<h2>Novo Produto</h2>
+
+<%= simple_form_for @product do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.file_field :image %>
+  <%= f.button :submit %>
+<% end %>
