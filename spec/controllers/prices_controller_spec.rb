@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe PricesController do
+describe Api::PricesController do
   describe 'POST create' do
     context 'successfully' do
       it 'adds a new price for a plan' do

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe PlansController do
+RSpec.describe Api::PlansController do
   describe 'POST create' do
     it 'a new plan' do
       product = create(:product)

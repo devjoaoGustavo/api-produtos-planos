@@ -6,6 +6,6 @@ class PlanDecorator < ApplicationDecorator
   private
 
   def links
-    { 'product_path' => product_path(__getobj__.product) }
+    { 'product_path' => api_product_path(__getobj__.product) }
   end
 end

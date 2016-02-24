@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe PeriodicitiesController do
+describe Api::PeriodicitiesController do
   describe 'POST create' do
     it 'creates a periodicity with params' do
       periodicity_params = { name: 'Name', deadline: 6 }

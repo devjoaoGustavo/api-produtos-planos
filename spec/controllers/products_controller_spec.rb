@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe ProductsController do
+describe Api::ProductsController do
   describe 'POST create' do
     before do
       FactoryGirl.reload
@@ -42,7 +42,6 @@ describe ProductsController do
       products = create_list(:product, 5)
 
       get :show, id: products[2].id, format: :json
-
       expect(JSON.parse(response.body)).to have_content products[2].name
       expect(JSON.parse(response.body)).to have_content products[2].image
 
