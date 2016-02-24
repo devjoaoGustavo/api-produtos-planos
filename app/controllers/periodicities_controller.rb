@@ -1,7 +1,6 @@
 class PeriodicitiesController < ApplicationController
   def create
-    @periodicity = Periodicity.create(name: params[:name],
-                                      deadline: params[:deadline])
+    @periodicity = Periodicity.create(periodicity_params)
     respond_with @periodicity
   end
 
@@ -17,7 +16,13 @@ class PeriodicitiesController < ApplicationController
 
   def update
     @periodicity = Periodicity.find(params[:id])
-    @periodicity.update(name: params[:name], deadline: params[:deadline])
+    @periodicity.update(periodicity_params)
     respond_with @periodicity
+  end
+
+  private
+
+  def periodicity_params
+    params.require(:periodicity).permit(:name, :deadline)
   end
 end

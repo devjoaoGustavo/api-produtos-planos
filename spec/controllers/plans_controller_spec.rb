@@ -4,20 +4,19 @@ RSpec.describe PlansController do
   describe 'POST create' do
     it 'a new plan' do
       product = create(:product)
+      plan_params = { name: 'Hospedagem',
+                      description: 'Descrição',
+                      details: 'Detalhes',
+                      product_id: product.id }
 
-      expect do
-        post :create,
-             name: 'Hospedagem',
-             description: 'Descrição',
-             details: 'Detalhes',
-             product_id: product.id,
-             format: :json
-      end
+      expect { post :create, plan: plan_params, format: :json }
         .to change { Plan.count }.from(0).to(1)
     end
 
     it 'does not create with blank fields' do
-      plan_attr = attributes_for(:plan, name: '', details: '', description: '',
+      plan_attr = attributes_for(:plan, name: '',
+                                        details: '',
+                                        description: '',
                                         product: nil)
       post :create, plan: plan_attr, format: :json
       expect(response).not_to have_http_status(:created)
@@ -45,16 +44,14 @@ RSpec.describe PlansController do
     describe 'POST update' do
       it 'edit a plan' do
         product = create(:product)
-        product_2 = create(:product, name: 'Outro produto')
+        product_2 = create(:product, name: 'Web mail')
         plan = create(:plan, product: product)
+        plan_params = { name: 'Hospedagem editado',
+                        description: 'Descrição editada',
+                        details: 'Detalhes editado',
+                        product_id: product_2.id }
 
-        put :update,
-            id: plan.id,
-            name: 'Hospedagem editado',
-            description: 'Descrição editada',
-            details: 'Detalhes editado',
-            product_id: product_2.id,
-            format: :json
+        put :update, id: plan.id, plan: plan_params, format: :json
 
         expect(response).to have_http_status(:success)
       end

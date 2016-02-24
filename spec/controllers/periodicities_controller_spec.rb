@@ -3,13 +3,19 @@ require 'rails_helper'
 describe PeriodicitiesController do
   describe 'POST create' do
     it 'creates a periodicity with params' do
-      post :create, name: 'Name', deadline: 6, format: :json
+      periodicity_params = { name: 'Name', deadline: 6 }
+
+      post :create, periodicity: periodicity_params, format: :json
+
       expect(response).to have_http_status(:created)
     end
 
     context 'with empty params' do
       it 'not creates a periodicity' do
-        post :create, name: '', deadline: nil, format: :json
+        periodicity_params = { name: '', deadline: nil }
+
+        post :create, periodicity: periodicity_params, format: :json
+
         expect(response).to_not have_http_status(:created)
       end
     end
@@ -39,25 +45,26 @@ describe PeriodicitiesController do
     context 'Successfully' do
       it 'update periodicity' do
         periodicity = create(:periodicity)
+        periodicity_params = { name: 'Nome alterado', deadline: 24 }
 
-        put :update,
-            id: periodicity.id,
-            name: 'Nome alterado',
-            deadline: 24,
-            format: :json
+        put :update, id: periodicity.id,
+                     periodicity: periodicity_params,
+                     format: :json
+
         expect(response).to have_http_status :success
       end
     end
+
     context 'Unsuccessfully' do
       it 'with empty params' do
         periodicity = create(:periodicity)
 
-        periodicity_params = { name: '',
-                               deadline: nil }
-        put :update,
-            id: periodicity.id,
-            periodicity: periodicity_params,
-            format: :json
+        periodicity_params = { name: '', deadline: nil }
+
+        put :update, id: periodicity.id,
+                     periodicity: periodicity_params,
+                     format: :json
+
         expect(response).not_to have_http_status :success
       end
     end

@@ -7,19 +7,21 @@ describe ProductsController do
     end
 
     it 'creates a product with params' do
-      post :create, name: 'Name',
-                    description: 'Description',
-                    image: open('spec/support/images/image.jpg'),
-                    format: :json
+      product_params = { name: 'Name',
+                         description: 'Description',
+                         image: open('spec/support/images/image.jpg') }
+
+      post :create, product: product_params, format: :json
+
       expect(response).to have_http_status(:created)
     end
 
     context 'with empty params' do
       it 'not creates a product' do
-        post :create, name: '',
-                      description: '',
-                      image: open('spec/support/images/image.jpg'),
-                      format: :json
+        product_params = { name: '', description: '', image: '' }
+
+        post :create, product: product_params, format: :json
+
         expect(response).to_not have_http_status(:created)
       end
     end
@@ -30,6 +32,7 @@ describe ProductsController do
       create_list(:product, 20)
 
       get :index, format: :json
+
       expect(JSON.parse(response.body)).to have_content '14 Hospedagem'
     end
   end
@@ -39,6 +42,7 @@ describe ProductsController do
       products = create_list(:product, 5)
 
       get :show, id: products[2].id, format: :json
+
       expect(JSON.parse(response.body)).to have_content products[2].name
       expect(JSON.parse(response.body)).to have_content products[2].image
 
@@ -47,15 +51,13 @@ describe ProductsController do
     end
   end
 
-  describe 'POST update' do
+  describe 'PUT update' do
     it 'edit a product' do
       product = create(:product)
+      product_params = { name: 'Nome editado',
+                         description: 'Descrição editada' }
 
-      put :update,
-          id: product.id,
-          name: 'Nome editado',
-          description: 'Descrição editada',
-          format: :json
+      put :update, id: product.id, product: product_params, format: :json
 
       expect(response).to have_http_status(:success)
     end
