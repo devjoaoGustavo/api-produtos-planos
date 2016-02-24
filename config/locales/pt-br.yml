@@ -1,6 +1,16 @@
 ---
 pt-BR:
   activerecord:
+    models:
+      product: Produto
+      plan: Plano
+      periodicity: Periodicidade
+      price: Preço
+    attributes:
+      product:
+        name: Nome
+        description: Descrição
+        image: Imagem
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'
