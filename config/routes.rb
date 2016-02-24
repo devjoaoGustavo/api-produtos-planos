@@ -8,4 +8,7 @@ Rails.application.routes.draw do
     resources :prices, only: [:index, :show, :create]
     resources :periodicities, only: [:create, :index, :update, :show]
   end
+
+  resources :plans, only: [:new, :create, :show]
+
 end

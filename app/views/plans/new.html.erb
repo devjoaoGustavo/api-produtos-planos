@@ -1,0 +1,11 @@
+<%= simple_form_for @plan do |f| %>
+  <%= f.input :name, label: 'Nome' %>
+  <br>
+  <%= f.input :description, label: 'Descrição' %>
+  <br>
+  <%= f.input :details, label: 'Detalhes' %>
+  <br>
+  <%= f.input :product_id, collection: @products, label: 'Produto', prompt: :translate %>
+  <br>
+  <%= f.submit 'Criar plano' %>
+<% end %>
