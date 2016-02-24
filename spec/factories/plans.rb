@@ -4,7 +4,7 @@ FactoryGirl.define do
       "#{n} Profissional"
     end
     description 'Plano profissional com todos os opcionais.'
-    details 'Detalhes do plano.'
+    details ['Detalhes do plano.']
     product
   end
 end

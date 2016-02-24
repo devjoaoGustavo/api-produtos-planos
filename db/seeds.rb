@@ -12,12 +12,12 @@ product = Product.create(name: 'Hospedagem',
 
 plan = Plan.create(name: 'Profissional',
                    description: 'Plano profissional com todos os opcionais.',
-                   details: 'Detalhes do plano.',
+                   details: ['Detalhes 1', 'Detalhes 2'],
                    product: product)
 
 plan = Plan.create(name: 'Básico',
                    description: 'Plano básico com todos os opcionais.',
-                   details: 'Detalhes do plano.',
+                   details: ['Detalhes 1', 'Detalhes 2'],
                    product: product)
 
 periodicity_1 = Periodicity.create(name: 'Semestral',
