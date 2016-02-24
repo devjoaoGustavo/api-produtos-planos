@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'home#welcome'
   resources :products, only: [:create, :show, :index, :update] do
     resources :plans, only: [:index]
   end
