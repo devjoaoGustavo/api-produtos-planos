@@ -11,11 +11,13 @@ module Api
     end
 
     def show
-      @plans = Plan.where('product_id = ?', params[:id])
       @product_decorated = ProductDecorator.new(Product.find(params[:id]))
+      @plans = @product_decorated.plans.map do |plan|
+        PlanDecorator.new(plan)
+      end
 
-      @response = { product: JSON.parse(@product_decorated.to_json),
-                    plans: @plans }
+      @response = { product: @product_decorated.to_json,
+                    plans: @plans.map { |plan| plan.to_json('prices_path') } }
       respond_with @response
     end
 

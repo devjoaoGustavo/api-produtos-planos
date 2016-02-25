@@ -10,15 +10,24 @@ product = Product.create(name: 'Hospedagem',
                          description: 'Hospedagem de domínios na Locaweb.',
                          image: open('spec/support/images/image.jpg'))
 
+product_2 = Product.create(name: 'Email',
+                         description: 'Email na Locaweb.',
+                         image: open('spec/support/images/image.jpg'))
+
 plan = Plan.create(name: 'Profissional',
                    description: 'Plano profissional com todos os opcionais.',
                    details: ['Detalhes 1', 'Detalhes 2'],
                    product: product)
 
-plan = Plan.create(name: 'Básico',
+plan_2 = Plan.create(name: 'Básico',
                    description: 'Plano básico com todos os opcionais.',
                    details: ['Detalhes 1', 'Detalhes 2'],
                    product: product)
+
+plan_3 = Plan.create(name: 'Plus',
+                   description: 'Plano plus com todos os opcionais.',
+                   details: 'Detalhes do plano.',
+                   product: product_2)
 
 periodicity_1 = Periodicity.create(name: 'Semestral',
                                  deadline: 6)
