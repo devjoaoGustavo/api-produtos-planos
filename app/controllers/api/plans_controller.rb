@@ -8,15 +8,8 @@ module Api
     end
 
     def show
-      @plan = PlanDecorator.new(Plan.find(params[:id]))
-
-      @periodicities = @plan.periodicities.uniq.map do |periodicity|
-        PeriodicityDecorator.new(periodicity, @plan)
-      end
-
-      @response = response_json(@plan, @periodicities)
-
-      respond_with @response
+      @plan = PlanDecorator.new(Plan.find(params[:id])).to_json
+      respond_with @plan
     end
 
     def create
@@ -31,15 +24,6 @@ module Api
     end
 
     private
-
-    def response_json(plan, periodicities)
-      if periodicities.present?
-        { plan: plan.to_json,
-          periodicities: periodicities.map(&:to_json) }
-      else
-        { plan: plan.to_json }
-      end
-    end
 
     def plan_params
       params.require(:plan).permit(:name,

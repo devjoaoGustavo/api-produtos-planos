@@ -47,39 +47,6 @@ RSpec.describe Api::PlansController do
       expect(JSON.parse(response.body)).to have_content plans[2].name
       expect(JSON.parse(response.body)).not_to have_content plans[3].name
     end
-
-    it 'get a specific plan with its prices for periodicities' do
-      plan = create(:plan)
-      periodicity_1 = create(:periodicity)
-      periodicity_2 = create(:periodicity)
-      periodicity_3 = create(:periodicity)
-      create(:price, plan_id: plan.id,
-                     periodicity_id: periodicity_1.id,
-                     value: 105.56)
-      price_2 = create(:price, plan_id: plan.id,
-                               periodicity_id: periodicity_1.id,
-                               value: 200.73)
-      create(:price, plan_id: plan.id,
-                     periodicity_id: periodicity_2.id,
-                     value: 125.95)
-      price_4 = create(:price, plan_id: plan.id,
-                               periodicity_id: periodicity_2.id,
-                               value: 580.59)
-      create(:price, plan_id: plan.id,
-                     periodicity_id: periodicity_3.id,
-                     value: 565.57)
-      price_6 = create(:price, plan_id: plan.id,
-                               periodicity_id: periodicity_3.id,
-                               value: 100.58)
-
-      get :show, id: plan.id, format: :json
-      expect(JSON.parse(response.body)).to have_content periodicity_1.name
-      expect(JSON.parse(response.body)).to have_content price_2.value
-      expect(JSON.parse(response.body)).to have_content periodicity_2.name
-      expect(JSON.parse(response.body)).to have_content price_4.value
-      expect(JSON.parse(response.body)).to have_content periodicity_3.name
-      expect(JSON.parse(response.body)).to have_content price_6.value
-    end
   end
 
   describe 'POST update' do
