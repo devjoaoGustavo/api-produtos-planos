@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/environment.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/application.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/config/application.rb": [
         1,
         null,
         1,
@@ -48,12 +48,12 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/boot.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/environments/test.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/config/environments/test.rb": [
         1,
         null,
         null,
@@ -97,7 +97,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/initializers/assets.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -110,7 +110,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/initializers/backtrace_silencers.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -119,18 +119,18 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/initializers/cookies_serializer.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/initializers/filter_parameter_logging.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/initializers/inflections.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -148,18 +148,18 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/initializers/mime_types.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/initializers/session_store.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/initializers/wrap_parameters.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -175,7 +175,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/factories/periodicities.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/spec/factories/periodicities.rb": [
         1,
         1,
         1,
@@ -185,7 +185,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/factories/plans.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/spec/factories/plans.rb": [
         1,
         1,
         1,
@@ -197,7 +197,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/factories/prices.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/spec/factories/prices.rb": [
         1,
         1,
         1,
@@ -208,7 +208,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/factories/products.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/spec/factories/products.rb": [
         1,
         1,
         1,
@@ -219,7 +219,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/routes.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/config/routes.rb": [
         1,
         1,
         1,
@@ -234,15 +234,15 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/helpers/application_helper.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/helpers/products_helper.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/app/helpers/products_helper.rb": [
         1,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/controllers/api/periodicities_controller.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/app/controllers/api/periodicities_controller.rb": [
         1,
         1,
         1,
@@ -274,7 +274,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/controllers/api/api_controller.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/app/controllers/api/api_controller.rb": [
         1,
         null,
         1,
@@ -283,19 +283,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/lib/application_responder.rb": [
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/controllers/application_controller.rb": [
-        1,
-        null,
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/lib/application_responder.rb": [
         1,
         1,
         1,
@@ -305,7 +293,19 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/controllers/plans_controller_spec.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/app/controllers/application_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/spec/controllers/plans_controller_spec.rb": [
         1,
         null,
         1,
@@ -354,39 +354,6 @@
         1,
         null,
         null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
         null,
         1,
         1,
@@ -405,7 +372,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/controllers/api/plans_controller.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/app/controllers/api/plans_controller.rb": [
         1,
         1,
         1,
@@ -416,15 +383,8 @@
         null,
         null,
         1,
-        3,
-        null,
-        3,
-        3,
-        null,
-        null,
-        3,
-        null,
-        3,
+        2,
+        2,
         null,
         null,
         1,
@@ -439,15 +399,6 @@
         null,
         null,
         1,
-        null,
-        1,
-        3,
-        null,
-        1,
-        null,
-        2,
-        null,
-        null,
         null,
         1,
         3,
@@ -455,7 +406,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/controllers/prices_controller_spec.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/spec/controllers/prices_controller_spec.rb": [
         1,
         null,
         1,
@@ -489,7 +440,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/controllers/api/prices_controller.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/app/controllers/api/prices_controller.rb": [
         1,
         1,
         1,
@@ -518,7 +469,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/controllers/products_controller_spec.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/spec/controllers/products_controller_spec.rb": [
         1,
         null,
         1,
@@ -584,7 +535,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/controllers/api/products_controller.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/app/controllers/api/products_controller.rb": [
         1,
         1,
         1,
@@ -622,7 +573,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/requests/plans_api_spec.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/spec/requests/plans_api_spec.rb": [
         1,
         null,
         1,
@@ -661,7 +612,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/requests/prices_api_spec.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/spec/requests/prices_api_spec.rb": [
         1,
         null,
         1,
@@ -704,7 +655,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/requests/products_api_spec.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/spec/requests/products_api_spec.rb": [
         1,
         null,
         1,
@@ -718,7 +669,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/models/periodicity.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/app/models/periodicity.rb": [
         1,
         1,
         1,
@@ -726,7 +677,7 @@
         1,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/models/product.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/app/models/product.rb": [
         1,
         1,
         null,
@@ -735,18 +686,18 @@
         1,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/uploaders/image_uploader.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/app/uploaders/image_uploader.rb": [
         null,
         null,
         1,
         1,
         null,
         1,
-        67,
+        66,
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/models/plan.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/app/models/plan.rb": [
         1,
         1,
         1,
@@ -755,17 +706,17 @@
         1,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/decorators/plan_decorator.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/app/decorators/plan_decorator.rb": [
         1,
         1,
-        43,
+        42,
         null,
         null,
         1,
         null,
         1,
         null,
-        3,
+        2,
         null,
         null,
         1,
@@ -774,43 +725,24 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/decorators/application_decorator.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/app/decorators/application_decorator.rb": [
         1,
         1,
         null,
         1,
-        54,
-        null,
-        null
-      ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/models/price.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        null
-      ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/decorators/periodicity_decorator.rb": [
-        1,
-        1,
-        7,
-        7,
-        null,
-        null,
-        1,
-        7,
-        null,
-        null,
-        1,
-        null,
-        1,
-        null,
-        7,
+        50,
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/decorators/price_decorator.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/app/models/price.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/app/decorators/price_decorator.rb": [
         1,
         1,
         2,
@@ -824,7 +756,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/decorators/product_decorator.rb": [
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/app/decorators/product_decorator.rb": [
         1,
         1,
         2,
@@ -834,10 +766,29 @@
         null,
         1,
         2,
+        null,
+        null
+      ],
+      "/Users/timelocaweb1/Documents/workspace/plan-product-api/app/decorators/periodicity_decorator.rb": [
+        1,
+        1,
+        4,
+        4,
+        null,
+        null,
+        1,
+        4,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        4,
         null,
         null
       ]
     },
-    "timestamp": 1456408101
+    "timestamp": 1456426479
   }
 }

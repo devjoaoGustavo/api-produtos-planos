@@ -10,11 +10,11 @@ RSpec.describe 'Plans API', type: :request do
       json = JSON.parse(response.body)
 
       expect(response).to be_success
-      expect(json['plan']['name']).to eq(plan.name)
-      expect(json['plan']['details']).to eq(plan.details)
-      expect(json['plan']['description']).to eq(plan.description)
-      expect(json['plan']['product_id']).to eq(plan.product.id)
-      expect(json['plan']['product_path']).to eq api_product_path(product)
+      expect(json['name']).to eq(plan.name)
+      expect(json['details']).to eq(plan.details)
+      expect(json['description']).to eq(plan.description)
+      expect(json['product_id']).to eq(plan.product.id)
+      expect(json['product_path']).to eq api_product_path(product)
     end
   end
 
