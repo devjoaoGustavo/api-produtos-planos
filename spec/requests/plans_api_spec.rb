@@ -22,15 +22,16 @@ RSpec.describe 'Plans API', type: :request do
     it 'shows all plans' do
       NUMBER_OF_PLANS = 20
       product = create(:product)
-      create_list(:plan, NUMBER_OF_PLANS, product: product)
+      plans = create_list(:plan, NUMBER_OF_PLANS, product: product)
 
       get "/api/plans.json?product_id=#{product.id}"
 
       json = JSON.parse(response.body)
 
       expect(response).to be_success
-
       expect(json.count).to eq NUMBER_OF_PLANS
+      expect(json[1]['plan_path']).to eq "/api/plans/#{plans[1].id}"
+      expect(json[1]['prices_path']).to eq "/api/plans/#{plans[1].id}/prices"
     end
   end
 end
