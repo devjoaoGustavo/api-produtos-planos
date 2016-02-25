@@ -11,6 +11,11 @@ pt-BR:
         name: Nome
         description: Descrição
         image: Imagem
+      plan:
+        name: Nome
+        description: Descrição
+        details: Detalhes
+        product_id: Produto
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'
