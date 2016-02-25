@@ -8,12 +8,12 @@ The Plans and Products API is a micro service responsible for supplying a CRUD p
 
 ### Create
 Create a new product.
-```
+```json
 POST /api/products
 ```
 
 #### Request
-```
+```json
 {
   "name": "Hospedagem",
   "description": "Descrição do produto.",
@@ -22,7 +22,7 @@ POST /api/products
 ```
 
 #### Response
-```
+```json
 Status: 201 Created
 Location: /api/products/3
 
@@ -40,13 +40,13 @@ Location: /api/products/3
 
 ### Index
 Get all existing products.
-```
+```json
 GET /api/products
 ```
 
 #### Response
 
-```
+```json
 Status: HTTP/1.1 200 OK
 Location: /api/products
 
@@ -76,13 +76,13 @@ Location: /api/products
 
 ### Show
 Get a existing product.
-```
+```json
 GET /api/products/1
 ```
 
 #### Response
 
-```
+```json
 Status: HTTP/1.1 200 OK
 Location: /api/products/1
 
@@ -128,12 +128,12 @@ Location: /api/products/1
 
 ### Create
 Create a new plans
-```
+```json
 POST /plans
 ```
 
 #### Request
-```
+```json
 {
   "name": "Plus",
   "description": "Hospedagem plus. Aquela que você sempre sonhou.",
@@ -143,7 +143,7 @@ POST /plans
 ```
 
 #### Response
-```
+```json
 Status 201 Created
 Location: /plans/3
 
@@ -160,13 +160,13 @@ Location: /plans/3
 
 ### Index
 Get all registered plans
-```
+```json
 GET /api/plans?product_id=1
 GET /api/products/1/plans
 ```
 
 #### Response
-```
+```json
 HTTP/1.1 200 OK
 Location: /api/plans
 Location: /api/products/1/plans
@@ -199,11 +199,11 @@ Location: /api/products/1/plans
 
 ### Show
 Get a registered plan
-```
+```json
 GET /plans/3
 ```
 #### Response
-```
+```json
 Status: HTTP/1.1 200 OK
 Location: /plans/1
 
@@ -252,12 +252,12 @@ Location: /plans/1
 
 ### Index
 Show all available periodicities
-```
+```json
 GET /api/periodicities
 ```
 
 #### Response
-```
+```json
 Status: HTTP/1.1 200 OK
 Location: /api/periodicities
 
@@ -288,12 +288,12 @@ Location: /api/periodicities
 
 ### Show
 Show a specific periodicity's info
-```
+```json
 GET /api/periodicities/1
 ```
 
 #### Response
-```
+```json
 Status: HTTP/1.1 200 OK
 Location: /api/periodicities/1
 
@@ -310,12 +310,12 @@ Location: /api/periodicities/1
 
 ### Index
 Show all prices in each periodicity for a plan
-```
+```json
 GET /api/plans/1/prices
 ```
 
 #### Response
-```
+```json
 Status: HTTP/1.1 200 OK
 Location: /api/plans/1/prices
 
@@ -349,12 +349,12 @@ Location: /api/plans/1/prices
 
 ### Show
 Show a specific price's info using its ID
-```
+```json
 GET /api/prices/1
 ```
 
 #### Response
-```
+```json
 Status: HTTP/1.1 200 OK
 Location: /api/prices/1
 
