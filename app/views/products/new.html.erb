@@ -1,9 +1,12 @@
-<h2>Novo Produto</h2>
 
+<div class="container-fluid">
+  <h2>Novo Produto</h2>
+  <hr>
 <%= simple_form_for @product do |f| %>
-  <%= f.input :name %>
+  <%= f.input :name, class: 'form-control' %>
   <%= f.input :description %>
   <%= f.label :image %>
-  <%= f.file_field :image %>
-  <%= f.button :submit %>
+  <%= f.file_field :image %><br>
+  <%= f.button :submit, class: 'btn btn-info' %>
 <% end %>
+</div>
