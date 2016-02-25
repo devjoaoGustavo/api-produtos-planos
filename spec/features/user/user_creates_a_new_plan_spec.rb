@@ -1,14 +1,19 @@
 require 'rails_helper'
 
-feature 'User creates a new plan' do
+feature 'User creates a new plan', :js => true do
   scenario 'successfully' do
+  
+
     product = create(:product)
 
     visit new_plan_path
 
     fill_in 'Nome', with: 'Premium'
     fill_in 'Descrição', with: 'Plano premium'
-    fill_in 'Detalhes', with: 'Armazenamento ilimitado'
+
+    click_on 'Adicionar Detalhe'
+    fill_in 'plan_details_0', with: 'Armazenamento ilimitado'
+
     select product.name, from: 'Produto'
 
     click_on 'Criar plano'
@@ -17,6 +22,7 @@ feature 'User creates a new plan' do
     expect(page).to have_content 'Plano premium'
     expect(page).to have_content 'Armazenamento ilimitado'
     expect(page).to have_content product.name
+
   end
 
   scenario 'unsuccessfully' do

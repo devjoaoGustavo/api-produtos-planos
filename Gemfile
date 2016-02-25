@@ -20,6 +20,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry-rails'
   gem 'rubocop', require: false
+  gem 'selenium-webdriver'
 end
 
 group :development do

@@ -3,7 +3,11 @@
   <br>
   <%= f.input :description, label: 'Descrição' %>
   <br>
-  <%= f.input :details, label: 'Detalhes' %>
+  <div class="input_fields_wrap">
+    <div>
+      <p>Detalhe<button class="add_field_button">Adicionar Detalhe</button></p>
+    </div>
+  </div>
   <br>
   <%= f.input :product_id, collection: @products, label: 'Produto', prompt: :translate %>
   <br>

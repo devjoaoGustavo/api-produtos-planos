@@ -6,10 +6,9 @@ class PlansController < ApplicationController
 
   def create
     @plan = Plan.new(plan_params)
-    # params[:plan][:details].split("\n").each do |detail|
-    #   @plan.details << detail
-    # end
-    @plan.details << params[:plan][:details]
+    params[:plan][:details].each do |detail|
+      @plan.details << detail[1]
+    end
     @plan.save
     respond_with @plan
   end
