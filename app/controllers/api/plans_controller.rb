@@ -11,7 +11,8 @@ module Api
       @periodicities = @plan.periodicities.uniq.map do |periodicity|
         PeriodicityDecorator.new(periodicity, @plan)
       end
-      @response = { plan: @plan, periodicities: @periodicities.map(&:to_json) }
+      @response = { plan: @plan.to_json,
+                    periodicities: @periodicities.map(&:to_json) }
       respond_with @response
     end
 

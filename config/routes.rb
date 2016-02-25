@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :plans, only: [:create, :show, :index, :update] do
       resources :prices, only: :index
     end
-    resources :prices, only: [:index, :show, :create]
+    resources :prices, only: [:show, :create]
     resources :periodicities, only: [:create, :index, :update, :show]
   end
 end

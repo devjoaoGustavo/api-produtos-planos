@@ -14,8 +14,7 @@ module Api
       @product_decorated = ProductDecorator.new(Product.find(params[:id]))
       @plans = @product_decorated.plans
 
-      @response = { product: JSON.parse(@product_decorated.to_json),
-                    plans: @plans }
+      @response = { product: @product_decorated.to_json, plans: @plans }
       respond_with @response
     end
 

@@ -10,14 +10,17 @@ module Api
     end
 
     def show
-      @price_decorated = PriceDecorator.new(Price.find(params[:id]))
+      @price_decorated = PriceDecorator.new(Price.find(params[:id])).to_json
       respond_with @price_decorated
     end
 
     def index
-      @prices = Price.where(plan_id: params[:plan_id],
-                            periodicity_id: params[:periodicity_id])
-                     .order(id: :desc)
+      @plan = Plan.find(params[:plan_id])
+      @periodicities = @plan.periodicities.uniq.map do |periodicity|
+        PeriodicityDecorator.new(periodicity, @plan)
+      end
+      @prices = @periodicities.map(&:to_json)
+
       respond_with @prices
     end
   end

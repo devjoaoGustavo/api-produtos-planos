@@ -2,12 +2,14 @@ require 'rails_helper'
 
 describe Api::PeriodicitiesController do
   describe 'POST create' do
-    it 'creates a periodicity with params' do
-      periodicity_params = { name: 'Name', deadline: 6 }
+    context 'with params' do
+      it 'creates a periodicity' do
+        periodicity_params = { name: 'Name', deadline: 6 }
 
-      post :create, periodicity: periodicity_params, format: :json
+        post :create, periodicity: periodicity_params, format: :json
 
-      expect(response).to have_http_status(:created)
+        expect(response).to have_http_status(:created)
+      end
     end
 
     context 'with empty params' do
@@ -29,7 +31,9 @@ describe Api::PeriodicitiesController do
 
       expect(JSON.parse(response.body)).to have_content periodicities[4].name
     end
+  end
 
+  describe 'GET show' do
     it 'get a specific periodicity' do
       periodicities = create_list(:periodicity, 5)
 
@@ -42,8 +46,8 @@ describe Api::PeriodicitiesController do
   end
 
   describe 'PUT update' do
-    context 'Successfully' do
-      it 'update periodicity' do
+    context 'with params' do
+      it 'update the periodicity' do
         periodicity = create(:periodicity)
         periodicity_params = { name: 'Nome alterado', deadline: 24 }
 
@@ -55,8 +59,8 @@ describe Api::PeriodicitiesController do
       end
     end
 
-    context 'Unsuccessfully' do
-      it 'with empty params' do
+    context 'with empty params' do
+      it 'doesnt update the periodicity' do
         periodicity = create(:periodicity)
 
         periodicity_params = { name: '', deadline: nil }
