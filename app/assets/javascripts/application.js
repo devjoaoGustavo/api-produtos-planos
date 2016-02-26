@@ -26,12 +26,34 @@ $(document).ready(function() {
         e.preventDefault();
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
-            $(wrapper).append('<div><input class="string required" type="text" value="" name="plan[details][' + index + ']" id="plan_details_' + index + '"><a href="#" class="remove_field">Remover campo</a></div>'); //add input box
+            $(wrapper).append('<div><input class="string required" type="text" value="" name="plan[details][' + index + ']" id="plan_details_' + index + '"><a href="#" class="remove_field">Remover detalhe</a></div>'); //add input box
             index++;
         }
     });
 
     $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+        e.preventDefault(); $(this).parent('div').remove(); x--;
+
+    })
+});
+
+$(document).ready(function() {
+    var max_fields      = 10; //maximum input boxes allowed
+    var wrapper         = $(".input_fields_wrap_price"); //Fields wrapper
+    var add_button      = $(".add_field_button_price"); //Add button ID
+    var index           = 0;
+
+    var x = 1; //initlal text box count
+    $(add_button).click(function(e){ //on add input button click
+        e.preventDefault();
+        if(x < max_fields){ //max input box allowed
+            x++; //text box increment
+            $(wrapper).append('<div><input class="string required" type="text" value="" name="plan[details][' + index + ']" id="plan_details_' + index + '"><a href="#" class="remove_field_price">Remover periodicidade</a></div>'); //add input box
+            index++;
+        }
+    });
+
+    $(wrapper).on("click",".remove_field_price", function(e){ //user click on remove text
         e.preventDefault(); $(this).parent('div').remove(); x--;
 
     })
