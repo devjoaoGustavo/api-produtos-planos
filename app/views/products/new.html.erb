@@ -1,12 +1,13 @@
 
 <div class="container-fluid">
-  <h2>Novo Produto</h2>
-  <hr>
-<%= simple_form_for @product do |f| %>
-  <%= f.input :name, class: 'form-control' %>
-  <%= f.input :description %>
-  <%= f.label :image %>
-  <%= f.file_field :image %><br>
-  <%= f.button :submit, class: 'btn btn-info' %>
-<% end %>
+  <%= simple_form_for @product do |f| %>
+    <h2>Novo Produto</h2>
+    <hr>
+    <%= f.input :name %><br>
+    <%= f.input :description %><br>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+    <hr>
+    <%= f.button :submit, class: 'btn-info' %>
+  <% end %>
 </div>
