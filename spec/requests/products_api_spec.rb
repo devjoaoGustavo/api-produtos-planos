@@ -7,6 +7,6 @@ RSpec.describe 'Products API', type: :request do
 
     json = JSON.parse(response.body)
     expect(response).to be_success
-    expect(json['product']['plans_path']).to eq api_product_plans_path(product)
+    expect(json['plans_path']).to eq api_product_plans_path(product)
   end
 end

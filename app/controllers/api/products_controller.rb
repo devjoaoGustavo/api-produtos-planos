@@ -12,13 +12,7 @@ module Api
 
     def show
       @product_decorated = ProductDecorator.new(Product.find(params[:id]))
-      @plans = @product_decorated.plans.map do |plan|
-        PlanDecorator.new(plan)
-      end
-
-      @response = { product: @product_decorated.to_json,
-                    plans: @plans.map { |plan| plan.to_json('prices_path') } }
-      respond_with @response
+      respond_with @product_decorated.to_json
     end
 
     def update
