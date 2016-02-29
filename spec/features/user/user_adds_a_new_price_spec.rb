@@ -20,7 +20,7 @@ feature 'User add a new price' do
 
     click_on 'Atualizar plano'
 
-    expect(page).to have_content 'Plan was successfully updated'
+    expect(page).to have_content 'Plano foi atualizado com sucesso'
     expect(page).to have_content '2.99'
   end
 end

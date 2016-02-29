@@ -6,8 +6,8 @@ feature 'User creates a new plan' do
 
     click_on 'Criar plano'
 
-    %w(Name Description).each do |field|
-      expect(page).to have_content "#{field} can\'t be blank"
+    %w(Nome Descrição Produto).each do |field|
+      expect(page).to have_content "#{field} não pode ficar em branco"
     end
   end
 end
