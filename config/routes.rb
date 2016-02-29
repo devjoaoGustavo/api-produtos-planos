@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   end
 
   resources :products, only: [:new, :create, :show]
+  resources :plans, only: [:new, :create, :show, :edit, :update]
 end
