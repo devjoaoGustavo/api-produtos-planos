@@ -18,7 +18,7 @@ feature 'User add a new price' do
     select 'Mensal', from: 'Periodicidade'
     fill_in 'Valor', with: 2.99
 
-    click_on 'Atualizar plano'
+    click_on 'Atualizar Plano'
 
     expect(page).to have_content 'Plano foi atualizado com sucesso'
     expect(page).to have_content '2.99'

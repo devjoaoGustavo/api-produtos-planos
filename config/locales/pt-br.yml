@@ -32,12 +32,23 @@ pt-BR:
         deadline: Prazo
       price:
         value: Valor
+        periodicity_id: Periodicidade
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'
         restrict_dependent_destroy:
           has_one: Não é possível excluir o registro pois existe um %{record} dependente
           has_many: Não é possível excluir o registro pois existem %{record} dependentes
+  create_plan: Novo Plano
+  edit_plan: Editar Plano
+  insert_price: Inserir Preço
+  show_plan: Exibição de Plano
+  edit_product: Editar Produto
+  create_product: Novo Produto
+  show_product: Exibição de Produto
+  value: Valor
+  back: Voltar
+  prices: Preços
   date:
     abbr_day_names:
     - Dom

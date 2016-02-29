@@ -1,4 +1,4 @@
-<h2 class="ls-title-intro ls-ico-user"><%= t('.edit_plan') %> <%= @plan.name %></h2>
+<h2 class="ls-title-intro ls-ico-user"><%= t('edit_plan') %> <%= @plan.name %></h2>
 <hr>
 <% if @plan.errors.any? %>
   <ul>
@@ -26,36 +26,36 @@
     <div class="input_fields_wrap">
       <div>
         <label class="ls-label col-md-3">
-          <label class="text required control-label">Detalhe <button class="add_field_button ls-btn-primary" id="detalhe">+</button></label>
+          <label class="text required control-label"><%= t('activerecord.attributes.plan.details') %> <button class="add_field_button ls-btn-primary" id="detalhe">+</button></label>
         </label>
       </div>
     </div>
 
     <label class="ls-label col-md-3">
-      <b class="ls-label-text">Produtos</b>
+      <b class="ls-label-text"><%= t('activerecord.attributes.plan.product') %></b>
       <div class="ls-custom-select">
-          <%= f.input_field :product_id, collection: @products, label: 'Produto', prompt: :translate, class: "ls-custom-select" %>
+          <%= f.input_field :product_id, collection: @products, prompt: :translate, class: "ls-custom-select" %>
       </div>
     </label>
 
 
-        <%= f.simple_fields_for :prices do |price| %>
-        <label class="ls-label col-md-3">
-          <h3>Inserir Preço</h3>
-          <div class="ls-custom-select">
+    <%= f.simple_fields_for :prices do |price| %>
+      <label class="ls-label col-md-3">
+        <h3><%= t('insert_price') %></h3>
+        <br>
+        <div class="ls-custom-select">
 
-            <%= price.input_field :periodicity_id, collection: @periodicities,
-                                             label: 'Periodicidade',
-                                             prompt: :translate %>
-          </div>
-        </label>
-        <label class="ls-label col-md-3">
-          <%= price.input :value, label: 'Valor' %>
-        </label>
-        <% end %>
-      <div class="form-actions">
-        <%= f.submit 'Atualizar plano', class: 'ls-btn-primary ls-btn-block ls-btn-lg' %>
-      </div>
-      <p><%= link_to 'Voltar', :back %></p>
+          <%= price.input_field :periodicity_id, label: t('activerecord.attributes.price.periodicity_id'), collection: @periodicities,
+                                           prompt: t('activerecord.attributes.price.periodicity_id') %>
+        </div>
+      </label>
+      <label class="ls-label col-md-3">
+        <%= price.input :value, label: t('activerecord.attributes.price.value') %>
+      </label>
+    <% end %>
+    <div class="form-actions">
+      <%= f.submit class: 'ls-btn-primary ls-btn-block ls-btn-lg' %>
+    </div>
+    <p><%= link_to t('back'), :back %></p>
   <% end %>
 </div>
