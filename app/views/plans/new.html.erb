@@ -1,3 +1,5 @@
+<h2 class="ls-title-intro ls-ico-user"><%= t('.create_plan') %></h2>
+
 <% if @plan.errors.any? %>
   <ul>
   <% @plan.errors.full_messages.each do |error|%>
@@ -6,18 +8,36 @@
   </ul>
 <% end %>
 
-<%= simple_form_for @plan do |f| %>
-  <%= f.input :name, label: 'Nome' %>
-  <br>
-  <%= f.input :description, label: 'Descrição' %>
-  <br>
-  <div class="input_fields_wrap">
-    <div>
-      <p>Detalhe<button class="add_field_button">Adicionar Detalhe</button></p>
-    </div>
+<section id="customer_form">
+  <%= simple_form_for @plan do |f| %>
+
+    <div class="form-inputs">
+      <label class="ls-label col-md-3">
+        <%= f.input :name, label: 'Nome' %>
+      </label>
+
+      <label class="ls-label col-md-3">
+        <%= f.input :description, label: 'Descrição' %>
+      </label>
+
+        <div class="input_fields_wrap">
+          <div>
+            <label class="ls-label col-md-3">
+              <label class="text required control-label">Detalhe <button class="add_field_button ls-btn-primary" id="detalhe">+</button></label>
+            </label>
+          </div>
+        </div>
+
+        <label class="ls-label col-md-3">
+          <b class="ls-label-text">Produtos</b>
+          <div class="ls-custom-select">
+              <%= f.input_field :product_id, collection: @products, label: 'Produto', prompt: :translate, class: "ls-custom-select" %>
+          </div>
+        </label>
+
+        <div class="form-actions">
+          <%= f.submit 'Criar plano', class: 'ls-btn-primary ls-btn-block ls-btn-lg' %>
+        </div>
+      <% end %>
   </div>
-  <br>
-  <%= f.input :product_id, collection: @products, label: 'Produto', prompt: :translate %>
-  <br>
-  <%= f.submit 'Criar plano' %>
-<% end %>
+</section>

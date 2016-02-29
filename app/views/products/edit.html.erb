@@ -1,0 +1,29 @@
+<h2 class="ls-title-intro ls-ico-user"><%= t('.edit_product') %></h2>
+<section id="customer_form">
+  <%= simple_form_for @product do |f| %>
+    <div class="form-inputs">
+        <label class="ls-label col-md-3">
+          <%= f.input :name, required: true,
+                             autofocus: true,
+                             class: 'ls-login-bg-user ls-field-lg',
+                             error_html: { class: 'ls-success ls-help-message'}  %>
+        </label>
+
+        <label class="ls-label col-md-3">
+          <%= f.input :description, required: true,
+                                    class: 'ls-login-bg-user ls-field-lg',
+                                    error_html: { class: 'ls-success ls-help-message'}  %>
+        </label>
+
+        <label class="ls-label col-md-3">
+          <%= f.label :image, class: 'ls-login-bg-user ls-field-lg' %><br/>
+          <%= f.file_field :image %><br>
+        </label>
+
+        <div class="form-actions">
+          <%= f.button :submit, class: 'ls-btn-primary ls-btn-block ls-btn-lg' %>
+        </div>
+      <% end %>
+    </div>
+
+</section>

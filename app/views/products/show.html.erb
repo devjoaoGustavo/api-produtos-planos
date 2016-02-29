@@ -1,5 +1,10 @@
+<h2 class="ls-title-intro ls-ico-user"><%= t('.show_product') %></h2>
+
 <h2><%= flash[:notice] %></h2>
 
-<h3><%= @product.name %></h3>
-<p><strong>Descrição: </strong><%= @product.description %></p>
-<p><%= image_tag @product.image %></p>
+<span>
+  <h3><%= @product.name %></h3>
+  <hr>
+  <p><strong>Descrição: </strong><%= @product.description %></p>
+  <p><%= image_tag @product.image %></p>
+</span>

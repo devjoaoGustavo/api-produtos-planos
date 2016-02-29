@@ -1,4 +1,4 @@
-<h2><small>Editar plano</small> <%= @plan.name %></h2>
+<h2 class="ls-title-intro ls-ico-user"><%= t('.edit_plan') %> <%= @plan.name %></h2>
 <hr>
 <% if @plan.errors.any? %>
   <ul>
@@ -8,32 +8,54 @@
   </ul>
 <% end %>
 
+<section id="customer_form">
 <%= simple_form_for @plan do |f| %>
-  <%= f.input :name, label: 'Nome' %>
-  <br>
-  <%= f.input :description, label: 'Descrição' %>
-  <br>
-  <div class="input_fields_wrap">
-    <div>
-      <p>Detalhe<button class="add_field_button">Adicionar Detalhe</button></p>
-    </div>
-  </div>
-  <br>
-  <%= f.input :product_id, collection: @products, label: 'Produto', prompt: :translate %>
-  <br>
+  <div class="form-inputs">
+    <label class="ls-label col-md-3">
+      <%= f.input :name, required: true,
+                         autofocus: true,
+                         class: 'ls-login-bg-user ls-field-lg',
+                         error_html: { class: 'ls-success ls-help-message'}  %>
+    </label>
+    <label class="ls-label col-md-3">
+      <%= f.input :description, required: true,
+                                class: 'ls-login-bg-user ls-field-lg',
+                                error_html: { class: 'ls-success ls-help-message'}  %>
+    </label>
 
-  <div class="container">
-    <h3>Inserir Preço</h3>
-    <%= f.simple_fields_for :prices do |price| %>
-    <%= price.input :periodicity_id, collection: @periodicities,
-                                     label: 'Periodicidade',
-                                     prompt: :translate %>
-    <%= price.input :value, label: 'Valor' %>
-    <% end %>
-  </div>
-  <hr>
-  <p>
-    <%= f.submit 'Atualizar plano' %>
-    <%= link_to 'Voltar', :back %>
-  </p>
-<% end %>
+    <div class="input_fields_wrap">
+      <div>
+        <label class="ls-label col-md-3">
+          <label class="text required control-label">Detalhe <button class="add_field_button ls-btn-primary" id="detalhe">+</button></label>
+        </label>
+      </div>
+    </div>
+
+    <label class="ls-label col-md-3">
+      <b class="ls-label-text">Produtos</b>
+      <div class="ls-custom-select">
+          <%= f.input_field :product_id, collection: @products, label: 'Produto', prompt: :translate, class: "ls-custom-select" %>
+      </div>
+    </label>
+
+
+        <%= f.simple_fields_for :prices do |price| %>
+        <label class="ls-label col-md-3">
+          <h3>Inserir Preço</h3>
+          <div class="ls-custom-select">
+
+            <%= price.input_field :periodicity_id, collection: @periodicities,
+                                             label: 'Periodicidade',
+                                             prompt: :translate %>
+          </div>
+        </label>
+        <label class="ls-label col-md-3">
+          <%= price.input :value, label: 'Valor' %>
+        </label>
+        <% end %>
+      <div class="form-actions">
+        <%= f.submit 'Atualizar plano', class: 'ls-btn-primary ls-btn-block ls-btn-lg' %>
+      </div>
+      <p><%= link_to 'Voltar', :back %></p>
+  <% end %>
+</div>

@@ -38,7 +38,7 @@ class PlansController < ApplicationController
 
   def plan_params
     params.require(:plan).permit(:name, :description,
-                                 :product_id)
+                                 :product_id, details: [])
   end
 
   def price_params

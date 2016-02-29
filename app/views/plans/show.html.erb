@@ -1,26 +1,29 @@
-<div class="container">
-  <p><%= flash[:notice] %></p>
-  <p><b>Nome:</b> <%= @plan.name %></p>
-  <p><b>Descrição:</b> <%= @plan.description %></p>
-  <p><b>Produto:</b> <%= @plan.product.name %></p>
-  <div class="container details">
-    <p><b>Detalhes:</b></p>
+<h2 class="ls-title-intro ls-ico-user"><%= t('.show_plan') %></h2>
+
+<span>
+  <h3><%= @plan.name %></h3>
+  <hr>
+  <p><strong>Descrição: </strong> <%= @plan.description %></p>
+  <p><strong>Produto: </strong> <%= @plan.product.name %></p>
+
+  <div class='group'>
+    <p><strong>Detalhes:</strong></p>
     <ul>
       <% @plan.details.each do |detail| %>
       <li><%= detail %></li>
       <% end %>
     </ul>
   </div>
-  <div class="container links">
-    <p><%= link_to 'Voltar', :back %>
-       <%= link_to 'Editar', edit_plan_path(@plan) %></p>
-  </div>
-</div>
-<hr>
-<div class="container prices">
+
+<div class='group'>
   <h4>Preços</h4>
   <% @plan.valid_prices.each do |price| %>
     <p><%= price.periodicity.name %><br>
        <%= price.value %></p>
   <% end %>
 </div>
+
+  <p><%= link_to 'Voltar', :back %>
+     <%= link_to 'Editar', edit_plan_path(@plan) %></p>
+
+</span>
