@@ -11,8 +11,8 @@ product = Product.create(name: 'Hospedagem',
                          image: open('spec/support/images/image.jpg'))
 
 product_2 = Product.create(name: 'Email',
-                         description: 'Email na Locaweb.',
-                         image: open('spec/support/images/image.jpg'))
+                          description: 'Email da Locaweb.',
+                          image: open('spec/support/images/image.jpg'))
 
 plan = Plan.create(name: 'Profissional',
                    description: 'Plano profissional com todos os opcionais.',
@@ -20,9 +20,14 @@ plan = Plan.create(name: 'Profissional',
                    product: product)
 
 plan_2 = Plan.create(name: 'Básico',
-                   description: 'Plano básico com todos os opcionais.',
-                   details: ['Detalhes 1', 'Detalhes 2'],
-                   product: product)
+                     description: 'Plano básico com todos os opcionais.',
+                     details: ['Detalhes 1', 'Detalhes 2'],
+                     product: product)
+
+plan_3 = Plan.create(name: 'Plus',
+                    description: 'Plano plus com todos os opcionais.',
+                    details: ['Detalhes 1', 'Detalhes 2'],
+                    product: product_2)
 
 plan_3 = Plan.create(name: 'Plus',
                    description: 'Plano plus com todos os opcionais.',
@@ -39,20 +44,29 @@ periodicity_3 = Periodicity.create(name: 'Anual',
 Price.create(plan: plan,
              periodicity: periodicity_1,
              value: 1.99)
-Price.create(plan: plan,
+Price.create(plan: plan_2,
+             periodicity: periodicity_1,
+             value: 2.99)
+Price.create(plan: plan_3,
              periodicity: periodicity_1,
              value: 3.99)
 
 Price.create(plan: plan,
              periodicity: periodicity_2,
              value: 4.99)
-Price.create(plan: plan,
+Price.create(plan: plan_2,
              periodicity: periodicity_2,
              value: 5.99)
+Price.create(plan: plan_3,
+            periodicity: periodicity_2,
+            value: 6.99)
 
 Price.create(plan: plan,
              periodicity: periodicity_3,
-             value: 6.99)
-Price.create(plan: plan,
-             periodicity: periodicity_3,
              value: 7.99)
+Price.create(plan: plan_2,
+             periodicity: periodicity_3,
+             value: 8.99)
+Price.create(plan: plan_3,
+             periodicity: periodicity_3,
+             value: 9.99)
