@@ -8,6 +8,6 @@ class Plan < ActiveRecord::Base
   validates :name, :description, :product, presence: true
 
   def valid_prices
-    prices.group_by { |price| price.periodicity_id }.map { |p| p[1].max }
+    prices.group_by(&:periodicity_id).map { |p| p[1].max }
   end
 end

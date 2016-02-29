@@ -1,8 +1,10 @@
+<h2><small>Editar plano</small> <%= @plan.name %></h2>
+<hr>
 <% if @plan.errors.any? %>
   <ul>
-  <% @plan.errors.full_messages.each do |error|%>
-    <li><%= error %></li>
-  <% end %>
+    <% @plan.errors.full_messages.each do |error|%>
+      <li><%= error %></li>
+    <% end %>
   </ul>
 <% end %>
 
@@ -26,7 +28,7 @@
     <%= price.input :periodicity_id, collection: @periodicities,
                                      label: 'Periodicidade',
                                      prompt: :translate %>
-    <%= price.input :value %>
+    <%= price.input :value, label: 'Valor' %>
     <% end %>
   </div>
   <hr>

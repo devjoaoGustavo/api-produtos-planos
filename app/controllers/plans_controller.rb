@@ -1,4 +1,6 @@
 class PlansController < ApplicationController
+  before_action :set_plan, only: [:show, :edit, :update]
+
   def new
     @products = Product.all
     @plan = Plan.new
@@ -12,18 +14,15 @@ class PlansController < ApplicationController
   end
 
   def show
-    @plan = Plan.find(params[:id])
   end
 
   def edit
-    @plan = Plan.find(params[:id])
     @periodicities = Periodicity.all
     @price = @plan.prices.build
   end
 
   def update
     @periodicities = Periodicity.all
-    @plan = Plan.find(params[:id])
     @plan.update(plan_params)
     @plan.prices.create(periodicity_id: price_params[:prices][:periodicity_id],
                         value: price_params[:prices][:value])
@@ -33,13 +32,17 @@ class PlansController < ApplicationController
 
   private
 
+  def set_plan
+    @plan = Plan.find(params[:id])
+  end
+
   def plan_params
     params.require(:plan).permit(:name, :description,
-                                 :product_id, { details: [] })
+                                 :product_id)
   end
 
   def price_params
-    params.require(:plan).permit({ prices: [:periodicity_id, :value] })
+    params.require(:plan).permit(prices: [:periodicity_id, :value])
   end
 
   def save_details(plan)

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'User creates a new plan' do
-    scenario 'unsuccessfully' do
+  scenario 'unsuccessfully' do
     visit new_plan_path
 
     click_on 'Criar plano'
