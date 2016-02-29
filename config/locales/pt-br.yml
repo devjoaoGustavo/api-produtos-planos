@@ -26,7 +26,7 @@ pt-BR:
         name: Nome
         description: Descrição
         details: Detalhes
-        product_id: Produto
+        product: Produto
       periodicity:
         name: Nome
         deadline: Prazo

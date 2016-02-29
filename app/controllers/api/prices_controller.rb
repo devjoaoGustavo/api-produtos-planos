@@ -15,8 +15,12 @@ module Api
     end
 
     def index
-      @prices = Price.in_order(params[:plan_id], params[:periodicity_id])
-      respond_with @prices
+      @plan = Plan.find(params[:plan_id])
+      @periodicities = @plan.periodicities
+      @prices = @periodicities.map do |periodicity|
+        PeriodicityDecorator.new(periodicity, @plan)
+      end
+      respond_with @prices.map(&:to_json)
     end
   end
 end
