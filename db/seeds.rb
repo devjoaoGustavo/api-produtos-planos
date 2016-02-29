@@ -31,7 +31,7 @@ plan_3 = Plan.create(name: 'Plus',
 
 plan_3 = Plan.create(name: 'Plus',
                    description: 'Plano plus com todos os opcionais.',
-                   details: 'Detalhes do plano.',
+                   details: ['Detalhes do plano.'],
                    product: product_2)
 
 periodicity_1 = Periodicity.create(name: 'Semestral',
