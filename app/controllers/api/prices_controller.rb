@@ -15,9 +15,7 @@ module Api
     end
 
     def index
-      @prices = Price.where(plan_id: params[:plan_id],
-                            periodicity_id: params[:periodicity_id])
-                     .order(id: :desc)
+      @prices = Price.in_order(params[:plan_id], params[:periodicity_id])
       respond_with @prices
     end
   end

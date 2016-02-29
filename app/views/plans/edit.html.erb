@@ -20,18 +20,18 @@
   <%= f.input :product_id, collection: @products, label: 'Produto', prompt: :translate %>
   <br>
 
-  <div class="input_fields_wrap_price">
-    <div>
-      <p>Periodicidade<button class="add_field_button_price">Adicionar periodicidade</button></p>
-    </div>
-  </div>
-
-  <%= f.simple_fields_for :prices do |price| %>
+  <div class="container">
+    <h3>Inserir Preço</h3>
+    <%= f.simple_fields_for :prices do |price| %>
     <%= price.input :periodicity_id, collection: @periodicities,
-                                     label: 'Periodicity',
+                                     label: 'Periodicidade',
                                      prompt: :translate %>
     <%= price.input :value %>
-  <% end %>
-
-  <%= f.submit 'Atualizar plano' %>
+    <% end %>
+  </div>
+  <hr>
+  <p>
+    <%= f.submit 'Atualizar plano' %>
+    <%= link_to 'Voltar', :back %>
+  </p>
 <% end %>
