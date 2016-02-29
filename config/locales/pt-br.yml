@@ -4,13 +4,13 @@ pt-BR:
     actions:
       create:
         notice: '%{resource_name} foi criado com sucesso.'
-        # alert: '%{resource_name} could not be created.'
+         alert: '%{resource_name} não pôde ser criado.'
       update:
-        notice: '%{resource_name} foi alterado com sucesso.'
-        # alert: '%{resource_name} could not be updated.'
+        notice: '%{resource_name} foi atualizado com sucesso.'
+        alert: '%{resource_name} não pôde ser atualizado.'
       destroy:
         notice: '%{resource_name} foi apagado com sucesso.'
-        alert: '%{resource_name} could not be destroyed.'
+        alert: '%{resource_name} não pôde ser apagado.'
   activerecord:
     models:
       product: Produto
@@ -27,6 +27,11 @@ pt-BR:
         description: Descrição
         details: Detalhes
         product_id: Produto
+      periodicity:
+        name: Nome
+        deadline: Prazo
+      price:
+        value: Valor
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'
