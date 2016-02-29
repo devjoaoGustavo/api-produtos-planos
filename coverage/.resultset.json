@@ -1144,11 +1144,6 @@
         1,
         null,
         1,
-        null,
-        1,
-        null,
-        0,
-        null,
         null
       ],
       "/Users/timelocaweb5/Documents/workspace/api-produtos-planos/app/decorators/price_decorator.rb": [
@@ -1277,6 +1272,6 @@
         null
       ]
     },
-    "timestamp": 1456769993
+    "timestamp": 1456770346
   }
 }
