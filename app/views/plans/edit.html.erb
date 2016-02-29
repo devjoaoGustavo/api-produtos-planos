@@ -1,0 +1,39 @@
+<h2><small>Editar plano</small> <%= @plan.name %></h2>
+<hr>
+<% if @plan.errors.any? %>
+  <ul>
+    <% @plan.errors.full_messages.each do |error|%>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= simple_form_for @plan do |f| %>
+  <%= f.input :name, label: 'Nome' %>
+  <br>
+  <%= f.input :description, label: 'Descrição' %>
+  <br>
+  <div class="input_fields_wrap">
+    <div>
+      <p>Detalhe<button class="add_field_button">Adicionar Detalhe</button></p>
+    </div>
+  </div>
+  <br>
+  <%= f.input :product_id, collection: @products, label: 'Produto', prompt: :translate %>
+  <br>
+
+  <div class="container">
+    <h3>Inserir Preço</h3>
+    <%= f.simple_fields_for :prices do |price| %>
+    <%= price.input :periodicity_id, collection: @periodicities,
+                                     label: 'Periodicidade',
+                                     prompt: :translate %>
+    <%= price.input :value, label: 'Valor' %>
+    <% end %>
+  </div>
+  <hr>
+  <p>
+    <%= f.submit 'Atualizar plano' %>
+    <%= link_to 'Voltar', :back %>
+  </p>
+<% end %>

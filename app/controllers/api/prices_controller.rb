@@ -15,12 +15,7 @@ module Api
     end
 
     def index
-      @plan = Plan.find(params[:plan_id])
-      @periodicities = @plan.periodicities.uniq.map do |periodicity|
-        PeriodicityDecorator.new(periodicity, @plan)
-      end
-      @prices = @periodicities.map(&:to_json)
-
+      @prices = Price.in_order(params[:plan_id], params[:periodicity_id])
       respond_with @prices
     end
   end

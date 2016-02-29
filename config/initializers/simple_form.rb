@@ -49,6 +49,7 @@ SimpleForm.setup do |config|
     # use the component :full_error, like:
     #
     b.use :full_error, wrap_with: { tag: :div, class: 'ls-alert-danger' }
+
   end
 
   # The default wrapper to be used by the FormBuilder.
@@ -105,6 +106,11 @@ SimpleForm.setup do |config|
   # You can define the default class to be used on forms. Can be overriden
   # with `html: { :class }`. Defaulting to none.
   config.default_form_class = nil
+  # config.label_class = nil
+
+  # You can define the default class to be used on forms. Can be overriden
+  # with `html: { :class }`. Defaulting to none.
+  # config.default_form_class = nil
 
   # You can define which elements should obtain additional classes
   # config.generate_additional_classes_for = [:wrapper, :label, :input]

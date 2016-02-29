@@ -21,6 +21,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rubocop', require: false
   gem 'simplecov', require: false
+  gem 'selenium-webdriver'
 end
 
 group :development do

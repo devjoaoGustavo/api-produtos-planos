@@ -5,5 +5,9 @@ class Plan < ActiveRecord::Base
 
   serialize :details, Array
 
-  validates :name, :details, :description, :product, presence: true
+  validates :name, :description, :product, presence: true
+
+  def valid_prices
+    prices.group_by(&:periodicity_id).map { |p| p[1].max }
+  end
 end

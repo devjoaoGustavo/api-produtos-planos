@@ -1,0 +1,26 @@
+<div class="container">
+  <p><%= flash[:notice] %></p>
+  <p><b>Nome:</b> <%= @plan.name %></p>
+  <p><b>Descrição:</b> <%= @plan.description %></p>
+  <p><b>Produto:</b> <%= @plan.product.name %></p>
+  <div class="container details">
+    <p><b>Detalhes:</b></p>
+    <ul>
+      <% @plan.details.each do |detail| %>
+      <li><%= detail %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="container links">
+    <p><%= link_to 'Voltar', :back %>
+       <%= link_to 'Editar', edit_plan_path(@plan) %></p>
+  </div>
+</div>
+<hr>
+<div class="container prices">
+  <h4>Preços</h4>
+  <% @plan.valid_prices.each do |price| %>
+    <p><%= price.periodicity.name %><br>
+       <%= price.value %></p>
+  <% end %>
+</div>
