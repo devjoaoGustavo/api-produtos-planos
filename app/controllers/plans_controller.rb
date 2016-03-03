@@ -1,5 +1,6 @@
 class PlansController < ApplicationController
   before_action :set_plan, only: [:show, :edit, :update]
+  before_action :set_periodicities, only: [:edit, :update]
 
   def new
     @products = Product.all
@@ -8,7 +9,6 @@ class PlansController < ApplicationController
 
   def create
     @plan = Plan.new(plan_params)
-
     save_details @plan
     respond_with @plan
   end
@@ -17,12 +17,10 @@ class PlansController < ApplicationController
   end
 
   def edit
-    @periodicities = Periodicity.all
     @price = @plan.prices.build
   end
 
   def update
-    @periodicities = Periodicity.all
     @plan.update(plan_params)
     @plan.prices.create(periodicity_id: price_params[:prices][:periodicity_id],
                         value: price_params[:prices][:value])
@@ -31,6 +29,10 @@ class PlansController < ApplicationController
   end
 
   private
+
+  def set_periodicities
+    @periodicities = Periodicity.all
+  end
 
   def set_plan
     @plan = Plan.find(params[:id])

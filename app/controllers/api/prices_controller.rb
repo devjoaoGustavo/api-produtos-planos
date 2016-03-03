@@ -1,7 +1,8 @@
 module Api
   class PricesController < ApiController
+    before_action :set_plan, only: [:index, :create]
+    
     def create
-      @plan = Plan.find(params[:plan_id])
       @periodicity = Periodicity.find(params[:periodicity_id])
       @price = Price.create(plan_id: @plan.id,
                             periodicity_id: @periodicity.id,
@@ -15,12 +16,15 @@ module Api
     end
 
     def index
-      @plan = Plan.find(params[:plan_id])
       @periodicities = @plan.periodicities
       @prices = @periodicities.map do |periodicity|
         PeriodicityDecorator.new(periodicity, @plan)
       end
       respond_with @prices.map(&:to_json)
+    end
+
+    def set_plan
+      @plan = Plan.find(params[:plan_id])
     end
   end
 end
