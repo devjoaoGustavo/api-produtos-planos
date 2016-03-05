@@ -35,3 +35,9 @@
 {
   margin-left: 5px;
 }
+
+input#plan_ {
+  display: block;
+  margin: 5px 0px;
+  width: 80%;
+}

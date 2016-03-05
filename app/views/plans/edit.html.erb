@@ -27,6 +27,7 @@
       <div>
         <label class="ls-label col-md-3">
           <label class="text required control-label"><%= t('activerecord.attributes.plan.details') %> <button class="add_field_button ls-btn-primary" id="detalhe">+</button></label>
+          <%= f.input :details, label: false, as: :array %>
         </label>
       </div>
     </div>
