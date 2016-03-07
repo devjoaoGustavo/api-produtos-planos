@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/environment.rb": [
+      "/home/joao/workspace/api-produtos-planos/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/application.rb": [
+      "/home/joao/workspace/api-produtos-planos/config/application.rb": [
         1,
         null,
         1,
@@ -48,12 +48,12 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/boot.rb": [
+      "/home/joao/workspace/api-produtos-planos/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/environments/test.rb": [
+      "/home/joao/workspace/api-produtos-planos/config/environments/test.rb": [
         1,
         null,
         null,
@@ -97,7 +97,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/initializers/assets.rb": [
+      "/home/joao/workspace/api-produtos-planos/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -110,7 +110,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/initializers/backtrace_silencers.rb": [
+      "/home/joao/workspace/api-produtos-planos/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -119,18 +119,18 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/initializers/cookies_serializer.rb": [
+      "/home/joao/workspace/api-produtos-planos/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/initializers/filter_parameter_logging.rb": [
+      "/home/joao/workspace/api-produtos-planos/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/initializers/inflections.rb": [
+      "/home/joao/workspace/api-produtos-planos/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -148,18 +148,18 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/initializers/mime_types.rb": [
+      "/home/joao/workspace/api-produtos-planos/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/initializers/session_store.rb": [
+      "/home/joao/workspace/api-produtos-planos/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/initializers/simple_form.rb": [
+      "/home/joao/workspace/api-produtos-planos/config/initializers/simple_form.rb": [
         null,
         1,
         null,
@@ -332,7 +332,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/initializers/simple_form_bootstrap.rb": [
+      "/home/joao/workspace/api-produtos-planos/config/initializers/simple_form_bootstrap.rb": [
         null,
         1,
         1,
@@ -483,7 +483,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/initializers/wrap_parameters.rb": [
+      "/home/joao/workspace/api-produtos-planos/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -499,7 +499,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/factories/periodicities.rb": [
+      "/home/joao/workspace/api-produtos-planos/spec/factories/periodicities.rb": [
         1,
         1,
         1,
@@ -509,7 +509,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/factories/plans.rb": [
+      "/home/joao/workspace/api-produtos-planos/spec/factories/plans.rb": [
         1,
         1,
         1,
@@ -521,7 +521,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/factories/prices.rb": [
+      "/home/joao/workspace/api-produtos-planos/spec/factories/prices.rb": [
         1,
         1,
         1,
@@ -532,7 +532,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/factories/products.rb": [
+      "/home/joao/workspace/api-produtos-planos/spec/factories/products.rb": [
         1,
         1,
         1,
@@ -543,7 +543,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/config/routes.rb": [
+      "/home/joao/workspace/api-produtos-planos/config/routes.rb": [
         1,
         1,
         null,
@@ -563,15 +563,15 @@
         1,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/helpers/application_helper.rb": [
+      "/home/joao/workspace/api-produtos-planos/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/helpers/products_helper.rb": [
+      "/home/joao/workspace/api-produtos-planos/app/helpers/products_helper.rb": [
         1,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/controllers/api/periodicities_controller.rb": [
+      "/home/joao/workspace/api-produtos-planos/app/controllers/api/periodicities_controller.rb": [
         1,
         1,
         1,
@@ -603,7 +603,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/controllers/api/api_controller.rb": [
+      "/home/joao/workspace/api-produtos-planos/app/controllers/api/api_controller.rb": [
         1,
         null,
         1,
@@ -612,7 +612,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/lib/application_responder.rb": [
+      "/home/joao/workspace/api-produtos-planos/lib/application_responder.rb": [
         1,
         1,
         1,
@@ -622,7 +622,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/controllers/application_controller.rb": [
+      "/home/joao/workspace/api-produtos-planos/app/controllers/application_controller.rb": [
         1,
         null,
         1,
@@ -634,7 +634,7 @@
         1,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/controllers/plans_controller_spec.rb": [
+      "/home/joao/workspace/api-produtos-planos/spec/controllers/plans_controller_spec.rb": [
         1,
         null,
         1,
@@ -703,7 +703,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/controllers/api/plans_controller.rb": [
+      "/home/joao/workspace/api-produtos-planos/app/controllers/api/plans_controller.rb": [
         1,
         1,
         1,
@@ -740,7 +740,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/controllers/prices_controller_spec.rb": [
+      "/home/joao/workspace/api-produtos-planos/spec/controllers/prices_controller_spec.rb": [
         1,
         null,
         1,
@@ -774,7 +774,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/controllers/api/prices_controller.rb": [
+      "/home/joao/workspace/api-produtos-planos/app/controllers/api/prices_controller.rb": [
         1,
         1,
         1,
@@ -802,7 +802,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/controllers/products_controller_spec.rb": [
+      "/home/joao/workspace/api-produtos-planos/spec/controllers/products_controller_spec.rb": [
         1,
         null,
         1,
@@ -868,7 +868,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/controllers/api/products_controller.rb": [
+      "/home/joao/workspace/api-produtos-planos/app/controllers/api/products_controller.rb": [
         1,
         1,
         1,
@@ -900,7 +900,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/features/user/user_adds_a_new_price_spec.rb": [
+      "/home/joao/workspace/api-produtos-planos/spec/features/user/user_adds_a_new_price_spec.rb": [
         1,
         null,
         1,
@@ -928,7 +928,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/features/user/user_creates_a_new_plan_spec.rb": [
+      "/home/joao/workspace/api-produtos-planos/spec/features/user/user_creates_a_new_plan_spec.rb": [
         1,
         null,
         1,
@@ -943,7 +943,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/features/user/user_creates_new_product_spec.rb": [
+      "/home/joao/workspace/api-produtos-planos/spec/features/user/user_creates_new_product_spec.rb": [
         1,
         null,
         1,
@@ -971,7 +971,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/requests/plans_api_spec.rb": [
+      "/home/joao/workspace/api-produtos-planos/spec/requests/plans_api_spec.rb": [
         1,
         null,
         1,
@@ -1010,7 +1010,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/requests/prices_api_spec.rb": [
+      "/home/joao/workspace/api-produtos-planos/spec/requests/prices_api_spec.rb": [
         1,
         null,
         1,
@@ -1053,7 +1053,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/spec/requests/products_api_spec.rb": [
+      "/home/joao/workspace/api-produtos-planos/spec/requests/products_api_spec.rb": [
         1,
         null,
         1,
@@ -1067,7 +1067,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/models/periodicity.rb": [
+      "/home/joao/workspace/api-produtos-planos/app/models/periodicity.rb": [
         1,
         1,
         1,
@@ -1075,7 +1075,7 @@
         1,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/models/product.rb": [
+      "/home/joao/workspace/api-produtos-planos/app/models/product.rb": [
         1,
         1,
         null,
@@ -1084,7 +1084,7 @@
         1,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/uploaders/image_uploader.rb": [
+      "/home/joao/workspace/api-produtos-planos/app/uploaders/image_uploader.rb": [
         null,
         null,
         1,
@@ -1095,7 +1095,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/models/plan.rb": [
+      "/home/joao/workspace/api-produtos-planos/app/models/plan.rb": [
         1,
         1,
         1,
@@ -1110,7 +1110,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/decorators/plan_decorator.rb": [
+      "/home/joao/workspace/api-produtos-planos/app/decorators/plan_decorator.rb": [
         1,
         1,
         42,
@@ -1129,7 +1129,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/decorators/application_decorator.rb": [
+      "/home/joao/workspace/api-produtos-planos/app/decorators/application_decorator.rb": [
         1,
         1,
         null,
@@ -1138,7 +1138,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/models/price.rb": [
+      "/home/joao/workspace/api-produtos-planos/app/models/price.rb": [
         1,
         1,
         1,
@@ -1146,7 +1146,7 @@
         1,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/decorators/price_decorator.rb": [
+      "/home/joao/workspace/api-produtos-planos/app/decorators/price_decorator.rb": [
         1,
         1,
         2,
@@ -1160,7 +1160,7 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/decorators/product_decorator.rb": [
+      "/home/joao/workspace/api-produtos-planos/app/decorators/product_decorator.rb": [
         1,
         1,
         2,
@@ -1173,24 +1173,10 @@
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/controllers/plans_controller.rb": [
-        1,
-        1,
-        null,
+      "/home/joao/workspace/api-produtos-planos/app/controllers/plans_controller.rb": [
         1,
         1,
         1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
         null,
         1,
         1,
@@ -1199,9 +1185,21 @@
         null,
         1,
         1,
+        null,
         1,
         1,
         null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
         1,
         1,
         null,
@@ -1216,53 +1214,84 @@
         2,
         null,
         null,
+        1,
+        2,
         null,
+        null,
+        null,
+        1,
+        3,
+        null,
+        null,
+        1,
+        null,
+        3,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/home/joao/workspace/api-produtos-planos/app/custom_inputs/array_input.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        3,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/joao/workspace/api-produtos-planos/app/controllers/products_controller.rb": [
+        1,
         1,
         2,
         null,
         null,
         1,
+        2,
+        2,
         null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
         0,
-        2,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
         2,
         null,
         null
       ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/controllers/products_controller.rb": [
-        1,
-        1,
-        2,
-        null,
-        null,
-        1,
-        2,
-        2,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        null,
-        1,
-        2,
-        null,
-        null
-      ],
-      "/home/joao/workspace/campuscode/ruby/time_jan_16/api-produtos-planos/app/decorators/periodicity_decorator.rb": [
+      "/home/joao/workspace/api-produtos-planos/app/decorators/periodicity_decorator.rb": [
         1,
         1,
         4,
@@ -1282,6 +1311,6 @@
         null
       ]
     },
-    "timestamp": 1456785736
+    "timestamp": 1457390331
   }
 }

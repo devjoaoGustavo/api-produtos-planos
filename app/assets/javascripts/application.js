@@ -17,7 +17,7 @@
 
 $(document).ready(function() {
     var max_fields      = 10; //maximum input boxes allowed
-    var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+    var wrapper         = $(".form-group.text.optional.plan_details"); //Fields wrapper
     var add_button      = $(".add_field_button"); //Add button ID
     var index           = 0;
 
@@ -26,18 +26,13 @@ $(document).ready(function() {
         e.preventDefault();
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
-            $(wrapper).append('<div class="more-details">' +
-            '<input class="string required" type="text" value="" name="plan[details]['
-            + index +
-            ']" id="plan_details_'
-            + index +
-            '"><button class="remove_field ls-btn-primary x-button">X</a></div>'); //add input box
+            $(wrapper).append('<span class="ls-prefix-group"><input class="string required" type="text" value="" name="plan[details][]" id="plan_' + x +'"><a class="ls-label-text-prefix remove_field ls-btn-primary x-button" data-target="#plan_' + x + '">X</a></span>'); //add input box
             index++;
         }
     });
 
     $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
-        e.preventDefault(); $(this).parent('div').remove(); x--;
+        e.preventDefault(); $(this).parent('span').remove(); x--;
 
     })
 });
