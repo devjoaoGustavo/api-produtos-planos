@@ -26,7 +26,7 @@ $(document).ready(function() {
         e.preventDefault();
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
-            $(wrapper).append('<span><input class="string required" type="text" value="" name="plan[details][]" id="plan_"><button class="remove_field ls-btn-primary x-button">X</a></span>'); //add input box
+            $(wrapper).append('<span class="ls-prefix-group"><input class="string required" type="text" value="" name="plan[details][]" id="plan_' + x +'"><a class="ls-label-text-prefix remove_field ls-btn-primary x-button" data-target="#plan_' + x + '">X</a></span>'); //add input box
             index++;
         }
     });
