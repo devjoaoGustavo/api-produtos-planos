@@ -1,7 +1,7 @@
 module Api
   class PricesController < ApiController
     before_action :set_plan, only: [:index, :create]
-    
+
     def create
       @periodicity = Periodicity.find(params[:periodicity_id])
       @price = Price.create(plan_id: @plan.id,

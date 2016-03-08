@@ -16,9 +16,7 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
 
   config.after(:all) do
-    if Rails.env.test?
-      FileUtils.rm_rf(Dir["#{Rails.root}/public/uploads"])
-    end
+    FileUtils.rm_rf(Dir["#{Rails.root}/public/uploads"]) if Rails.env.test?
   end
   config.infer_spec_type_from_file_location!
 
